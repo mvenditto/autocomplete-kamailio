@@ -1,0 +1,24 @@
+{
+  "name": "autocomplete-kamailio",
+  "main": "./lib/main",
+  "version": "0.1.0",
+  "description": "Autocomplete for kamailio (v5.1.x).",
+  "keywords": [
+    "autocomplete",
+    "provider",
+    "kamailio"
+  ],
+  "repository": "https://github.com/mvenditto/autocomplete-kamailio",
+  "author": "Matteo Venditto <matteo.venditto@gmail.com>",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.15.0 <2.0.0"
+  },
+  "providedServices": {
+    "autocomplete.provider": {
+      "versions": {
+        "2.0.0": "getProvider"
+      }
+    }
+  }
+}
