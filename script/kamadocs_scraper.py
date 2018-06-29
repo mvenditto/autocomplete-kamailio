@@ -56,7 +56,7 @@ def get_category(idx):
             return categories[latest]
     return ""
 
-for keyword_entry in zip(keywords[keywords_start_from:], descriptions):
+for keyword_entry in zip(keywords[keywords_start_from:], descriptions[keywords_start_from:]):
     keyword = keyword_entry[0].text
     desc = keyword_entry[1].text
     category = get_category(idx_from_class(keyword_entry[0]))
@@ -69,7 +69,7 @@ for keyword_entry in zip(keywords[keywords_start_from:], descriptions):
         "rightLabel": category
     })
 
-out = "/home/mvenditto/Workspace/Atom/atom-autocomplete-boilerplate/data/kamailio_5_1_x.json"
+out = "/home/mvenditto/Scaricati/kamailio_5_1_x.json"
 with open(out, "w+") as json_out:
     json_out.write(json.dumps(to_json, indent=4))
 
