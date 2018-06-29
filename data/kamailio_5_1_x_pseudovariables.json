@@ -1,0 +1,1944 @@
+[
+    {
+        "text": "$$ ",
+        "type": "variable",
+        "displayText": "$$ ",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "The list of pseudo-variables",
+        "description": " Pseudo\n\n\n$$ - represents the character '$'\n\n"
+    },
+    {
+        "text": "$_s(format) ",
+        "type": "variable",
+        "displayText": "$_s(format) ",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "The list of pseudo-variables",
+        "description": " Evaluate dynamic format\n\n\n$_s(format) - returns the string after evaluating all pseudo-variables in format\n\n    $var(x) = \"sip:\" + $rU + \"@\" + $fd;\n\n    # is equivalent of:\n\n    $var(x) = $_s(sip:$rU@$fd);\n",
+        "snippet": "$_s(${1:format}) "
+    },
+    {
+        "text": "$ai ",
+        "type": "variable",
+        "displayText": "$ai ",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "The list of pseudo-variables",
+        "description": " URI inP\n\n\n$ai - reference to URI in request's P-Asserted-Identity header (see RFC 3325)\n\n"
+    },
+    {
+        "text": "$adu ",
+        "type": "variable",
+        "displayText": "$adu ",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "The list of pseudo-variables",
+        "description": " Auth Digest URI\n\n\n$adu - URI from Authorization or Proxy-Authorization header. This URI is used when calculating the HTTP Digest Response.\n\n"
+    },
+    {
+        "text": "$aa ",
+        "type": "variable",
+        "displayText": "$aa ",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "The list of pseudo-variables",
+        "description": " Auth algorithm\n\n\n$aa - algorithm from Authorization or Proxy-Authorization header.\n\n"
+    },
+    {
+        "text": "$ar ",
+        "type": "variable",
+        "displayText": "$ar ",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "The list of pseudo-variables",
+        "description": " Auth realm\n\n\n$ar - realm from Authorization or Proxy-Authorization header\n\n"
+    },
+    {
+        "text": "$au ",
+        "type": "variable",
+        "displayText": "$au ",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "The list of pseudo-variables",
+        "description": " Auth username user\n\n\n$au - user part of username from Authorization or Proxy-Authorization header\n\n"
+    },
+    {
+        "text": "$ad ",
+        "type": "variable",
+        "displayText": "$ad ",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "The list of pseudo-variables",
+        "description": " Auth username domain\n\n\n$ad - domain part of username from Authorization or Proxy-Authorization header\n\n"
+    },
+    {
+        "text": "$aU ",
+        "type": "variable",
+        "displayText": "$aU ",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "The list of pseudo-variables",
+        "description": " Auth whole username\n\n\n$aU - whole username from Authorization or Proxy-Authorization header\n\n"
+    },
+    {
+        "text": "$Au ",
+        "type": "variable",
+        "displayText": "$Au ",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "The list of pseudo-variables",
+        "description": " Acc username\n\n\n$Au - username for accounting purposes. It's a selective pseudo variable (inherited from acc module). It returns auth username ($au) if exists or From username ($fU) otherwise.\n\n"
+    },
+    {
+        "text": "$branch(name) ",
+        "type": "variable",
+        "displayText": "$branch(name) ",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "The list of pseudo-variables",
+        "description": " Branch attributes\n\n\n$branch(name) - reference to attribute 'name' of a branch\n\n\nThis pseudo variable gives you access to the \u201cadditional branches\u201d only, not to the \u201cmain branch\u201d. E.g. if there are 3 clients registered for the same AoR, after lookup() you will have one contact in the \u201cmain branch\u201d and two \u201cadditional branches\u201d. Using $branch() you can access the additional branches, the main branch can be accessed using $ru and $du. (Note: In branch_routes there is no distinction between the main and the additional branches - the branch_route will be called once for each one of them.)\n\n\nThe 'name' can be:\n\n\n uri - return uri of the branch\n\n dst_uri - return destination uri (next hop address)\n\n path - return the path vector for the branch\n\n q - return the q value of the branch\n\n send_socket - return the socket to be used to send the branch\n\n count - return the number of the branches\n\n flags - return the branch flags value\n\n ruid - return the ruid of the branch (Record internal Unique ID from usrloc)\n\n\n\nThe PV can take an index to access a specif branch: $(branch(name)[index])\n\n\nExample:\n\n$var(i)=0;\nwhile($var(i)<$branch(count))\n{\n   xlog(\"$(branch(uri)[$var(i)])\\n\");\n   $var(i) = $var(i) + 1;\n}\n\nStarting with 3.1.0, you can assign value per attribute. Index can be used to update a specific branch:\n\n$(branch(attr)[index]) = value;\n\nIf index is missing, first branch is used. If index is -1 the last branch is used.\n\n\nAssigning $null to uri attribute will drop the branch, for the rest of attributes will just set the value to null.\n\n$(branch(uri)[2]) = \"sip:test@kamailio.org;transport=sctp\";\n",
+        "snippet": "$branch(${1:name}) "
+    },
+    {
+        "text": "$br ",
+        "type": "variable",
+        "displayText": "$br ",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "The list of pseudo-variables",
+        "description": " Request's first branch\n\n\n$br - reference to request's first branch\n\n\nIt is R/W variable, you can assign values to it directly in configuration file (will add a new branch).\n\n"
+    },
+    {
+        "text": "$bR ",
+        "type": "variable",
+        "displayText": "$bR ",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "The list of pseudo-variables",
+        "description": " Request's all branches\n\n\n$bR - reference to request's all branches\n\n"
+    },
+    {
+        "text": "$bf ",
+        "type": "variable",
+        "displayText": "$bf ",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "The list of pseudo-variables",
+        "description": " Branch flags\n\n\n$bf - reference to branch flags of branch 0 (RURI) - decimal output\n\n\nIt is R/W variable (you can assign values to it directly in configuration file)\n\n"
+    },
+    {
+        "text": "$bF ",
+        "type": "variable",
+        "displayText": "$bF ",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "The list of pseudo-variables",
+        "description": " Branch flags\n\n\n$bF - reference to branch flags of branch 0 (RURI) - hexa output\n\n\nIt is R/W variable (you can assign values to it directly in configuration file)\n\n"
+    },
+    {
+        "text": "$bs ",
+        "type": "variable",
+        "displayText": "$bs ",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "The list of pseudo-variables",
+        "description": " Body size\n\n\n$bs - body size\n\n"
+    },
+    {
+        "text": "$ci ",
+        "type": "variable",
+        "displayText": "$ci ",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "The list of pseudo-variables",
+        "description": " Call\n\n\n$ci - reference to body of call-id header\n\n"
+    },
+    {
+        "text": "$cl ",
+        "type": "variable",
+        "displayText": "$cl ",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "The list of pseudo-variables",
+        "description": " Content\n\n\n$cl - reference to body of content-length header\n\n"
+    },
+    {
+        "text": "$cnt(pv) ",
+        "type": "variable",
+        "displayText": "$cnt(pv) ",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "The list of pseudo-variables",
+        "description": " Count number of pvs\n\n\n$cnt(avp) - return the number of avps\n\nxlog(\"$$avp(x) fount $cnt($avp(x)) times\\n\");\n",
+        "snippet": "$cnt(${1:pv}) "
+    },
+    {
+        "text": "$conid ",
+        "type": "variable",
+        "displayText": "$conid ",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "The list of pseudo-variables",
+        "description": " TCP Connection ID\n\n\n$conid - The TCP connection ID of the connection the current message arrived on for TCP, TLS, WS, and WSS.  Set to $null for SCTP and UDP.\n\n"
+    },
+    {
+        "text": "$cs ",
+        "type": "variable",
+        "displayText": "$cs ",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "The list of pseudo-variables",
+        "description": " CSeq Number\n\n\n$cs - reference to the sequence number in the CSeq header. The method in the CSeq header is identical to the request method, thus use $rm to get the method (works also for responses).\n\n"
+    },
+    {
+        "text": "$csb ",
+        "type": "variable",
+        "displayText": "$csb ",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "The list of pseudo-variables",
+        "description": " CSeq Header Body\n\n\n$csb - reference to the CSeq header body (number method).\n\n"
+    },
+    {
+        "text": "$ct ",
+        "type": "variable",
+        "displayText": "$ct ",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "The list of pseudo-variables",
+        "description": " Contact header\n\n\n$ct - reference to body of contact header\n\n"
+    },
+    {
+        "text": "$cT ",
+        "type": "variable",
+        "displayText": "$cT ",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "The list of pseudo-variables",
+        "description": " Content\n\n\n$cT - reference to body of content-type header\n\n"
+    },
+    {
+        "text": "$dd ",
+        "type": "variable",
+        "displayText": "$dd ",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "The list of pseudo-variables",
+        "description": " Domain of destination URI\n\n\n$dd - reference to domain of destination uri (without port)\n\n"
+    },
+    {
+        "text": "$di ",
+        "type": "variable",
+        "displayText": "$di ",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "The list of pseudo-variables",
+        "description": " Diversion header URI\n\n\n$di - reference to Diversion header URI\n\n"
+    },
+    {
+        "text": "$dip ",
+        "type": "variable",
+        "displayText": "$dip ",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "The list of pseudo-variables",
+        "description": " Diversion \"privacy\" parameter\n\n\n$dip - reference to Diversion header \u201cprivacy\u201d parameter value\n\n"
+    },
+    {
+        "text": "$dir ",
+        "type": "variable",
+        "displayText": "$dir ",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "The list of pseudo-variables",
+        "description": " Diversion \"reason\" parameter\n\n\n$dir - reference to Diversion header \u201creason\u201d parameter value\n\n"
+    },
+    {
+        "text": "$dic ",
+        "type": "variable",
+        "displayText": "$dic ",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "The list of pseudo-variables",
+        "description": " Diversion \"counter\" parameter\n\n\n$dic - reference to Diversion header \u201ccounter\u201d parameter value\n\n"
+    },
+    {
+        "text": "$dp ",
+        "type": "variable",
+        "displayText": "$dp ",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "The list of pseudo-variables",
+        "description": " Port of destination URI\n\n\n$dp - reference to port of destination uri\n\n"
+    },
+    {
+        "text": "$dP ",
+        "type": "variable",
+        "displayText": "$dP ",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "The list of pseudo-variables",
+        "description": " Transport protocol of destination URI\n\n\n$dP - reference to transport protocol of destination uri\n\n"
+    },
+    {
+        "text": "$ds ",
+        "type": "variable",
+        "displayText": "$ds ",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "The list of pseudo-variables",
+        "description": " Destination set\n\n\n$ds - reference to destination set\n\n"
+    },
+    {
+        "text": "$du ",
+        "type": "variable",
+        "displayText": "$du ",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "The list of pseudo-variables",
+        "description": " Destination URI\n\n\n$du - reference to destination uri\n\n\nIf loose_route() returns TRUE a destination uri is set according to the first Route header.\n$du is also set if lookup() function of 'registrar' module finds contact(s) behind NAT. You can\nset $du to any SIP URI.\n\n sip:kamailio.org\n sip:pbx123.kamailio.org;transport=udp\n sip:[2001:DB8::33:2]:5980;transport=tls\n\nIt is R/W variable (you can assign values to it directly in configuration file)\n\n\nTo reset $du:\n\n$du = $null;\n"
+    },
+    {
+        "text": "$fd ",
+        "type": "variable",
+        "displayText": "$fd ",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "The list of pseudo-variables",
+        "description": " From URI domain\n\n\n$fd - reference to domain in URI of 'From' header\n\n"
+    },
+    {
+        "text": "$fn ",
+        "type": "variable",
+        "displayText": "$fn ",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "The list of pseudo-variables",
+        "description": " From display name\n\n\n$fn - reference to display name of 'From' header\n\n"
+    },
+    {
+        "text": "$fs ",
+        "type": "variable",
+        "displayText": "$fs ",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "The list of pseudo-variables",
+        "description": " Forced socket\n\n\n$fs - reference to the forced socket for message sending (if any) in the form proto:ip:port\n\n\nIt is R/W variable (you can assign values to it directly in configuration file). Transport proto can be omitted when assigning value, in which case it is taken from destination URI of the message.\n\n"
+    },
+    {
+        "text": "$ft ",
+        "type": "variable",
+        "displayText": "$ft ",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "The list of pseudo-variables",
+        "description": " From tag\n\n\n$ft - reference to tag parameter of 'From' header\n\n"
+    },
+    {
+        "text": "$fti ",
+        "type": "variable",
+        "displayText": "$fti ",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "The list of pseudo-variables",
+        "description": " Initial From tag\n\n\n$fti - reference to tag parameter of 'From' header as it was in the initial request (e.g., initial INVITE).\n\n\nThe value From tag in the initial request can be in the To tag, if the request within the dialog is sent by the callee. This variable detect who sent the request within the dialog and returns the proper value that was in the From tag of the request initiating the dialog.\n\n\nIt is exported by rr module and has to be used after loose_route(). The append_fromtag parameter is required to be set to 1 in order to have this variable returning the right value.\n\n"
+    },
+    {
+        "text": "$fu ",
+        "type": "variable",
+        "displayText": "$fu ",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "The list of pseudo-variables",
+        "description": " From URI\n\n\n$fu - reference to URI of 'From' header\n\n\nIt is R/W variable (you can assign values to it directly in configuration file)\n\n\nNote that changing the From: header may break backwards compatibility with SIP 1.0 devices.\n\n"
+    },
+    {
+        "text": "$fU ",
+        "type": "variable",
+        "displayText": "$fU ",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "The list of pseudo-variables",
+        "description": " From URI username\n\n\n$fU - reference to username in URI of 'From' header\n\n\nIt is R/W variable (you can assign values to it directly in configuration file)\n\n\nNote that changing the From: header may break backwards compatibility with SIP 1.0 devices.\n\n"
+    },
+    {
+        "text": "$mb ",
+        "type": "variable",
+        "displayText": "$mb ",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "The list of pseudo-variables",
+        "description": " SIP message buffer\n\n\n$mb - reference to SIP message buffer\n\n"
+    },
+    {
+        "text": "$mf ",
+        "type": "variable",
+        "displayText": "$mf ",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "The list of pseudo-variables",
+        "description": " Flags\n\n\n$mf - reference to message/transaction flags set for current SIP request\n\n\nIt is R/W variable (you can assign values to it directly in configuration file)\n\n"
+    },
+    {
+        "text": "$mF ",
+        "type": "variable",
+        "displayText": "$mF ",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "The list of pseudo-variables",
+        "description": " Flags in hexadecimal\n\n\n$mF -reference to message/transaction flags set for current SIP request in hexa-decimal\n\n\nIt is R/W variable (you can assign values to it directly in configuration file)\n\n"
+    },
+    {
+        "text": "$mi ",
+        "type": "variable",
+        "displayText": "$mi ",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "The list of pseudo-variables",
+        "description": " SIP message id\n\n\n$mi - reference to SIP message id\n\n"
+    },
+    {
+        "text": "$ml ",
+        "type": "variable",
+        "displayText": "$ml ",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "The list of pseudo-variables",
+        "description": " SIP message length\n\n\n$ml - reference to SIP message length\n\n"
+    },
+    {
+        "text": "$mt ",
+        "type": "variable",
+        "displayText": "$mt ",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "The list of pseudo-variables",
+        "description": " SIP Message Type\n\n\n$mt - returns 1 if the sip message is a request, returns 2 if the sip message is a reply\n\n"
+    },
+    {
+        "text": "$od ",
+        "type": "variable",
+        "displayText": "$od ",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "The list of pseudo-variables",
+        "description": " Domain original R\n\n\n$od - reference to domain in request's original R-URI\n\n"
+    },
+    {
+        "text": "$op ",
+        "type": "variable",
+        "displayText": "$op ",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "The list of pseudo-variables",
+        "description": " Port in original R\n\n\n$op - reference to port of original R-URI\n\n"
+    },
+    {
+        "text": "$oP ",
+        "type": "variable",
+        "displayText": "$oP ",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "The list of pseudo-variables",
+        "description": " Protocol of original R\n\n\n$oP - reference to transport protocol of original R-URI\n\n"
+    },
+    {
+        "text": "$ou ",
+        "type": "variable",
+        "displayText": "$ou ",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "The list of pseudo-variables",
+        "description": " Original R\n\n\n$ou - reference to request's original URI\n\n"
+    },
+    {
+        "text": "$oU ",
+        "type": "variable",
+        "displayText": "$oU ",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "The list of pseudo-variables",
+        "description": " Username in original R\n\n\n$oU - reference to username in request's original URI\n\n"
+    },
+    {
+        "text": "$pd ",
+        "type": "variable",
+        "displayText": "$pd ",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "The list of pseudo-variables",
+        "description": " Domain in P\n\n\n$pd - reference to domain in request's P-Preferred-Identity header URI (see RFC 3325)\n\n"
+    },
+    {
+        "text": "$pn ",
+        "type": "variable",
+        "displayText": "$pn ",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "The list of pseudo-variables",
+        "description": " Display Name in P\n\n\n$pn - reference to Display Name in request's P-Preferred-Identity header (see RFC 3325)\n\n"
+    },
+    {
+        "text": "$pp ",
+        "type": "variable",
+        "displayText": "$pp ",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "The list of pseudo-variables",
+        "description": " Process id\n\n\n$pp - reference to process id (pid)\n\n"
+    },
+    {
+        "text": "$pr or $proto ",
+        "type": "variable",
+        "displayText": "$pr or $proto ",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "The list of pseudo-variables",
+        "description": " Protocol of received message\n\n\n$pr or $proto - protocol of received message (udp, tcp, tls, sctp, ws, wss)\n\n"
+    },
+    {
+        "text": "$prid ",
+        "type": "variable",
+        "displayText": "$prid ",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "The list of pseudo-variables",
+        "description": " protocol id\n\n\n$prid - internal protocol id\n\n\n 0 - NONE\n\n 1 - UDP\n\n 2 - TCP\n\n 3 - TLS\n\n 4 - SCTP\n\n 5 - WS\n\n 6 - WSS\n\n 7 - OTHER\n\n\n"
+    },
+    {
+        "text": "$pU ",
+        "type": "variable",
+        "displayText": "$pU ",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "The list of pseudo-variables",
+        "description": " User in P\n\n\n$pU - reference to user in request's P-Preferred-Identity header URI (see RFC 3325)\n\n"
+    },
+    {
+        "text": "$pu ",
+        "type": "variable",
+        "displayText": "$pu ",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "The list of pseudo-variables",
+        "description": " URI in P\n\n\n$pu - reference to URI in request's P-Preferred-Identity header (see RFC 3325)\n\n"
+    },
+    {
+        "text": "$rb ",
+        "type": "variable",
+        "displayText": "$rb ",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "The list of pseudo-variables",
+        "description": " Body of request/reply\n\n\n$rb - reference to message body\n\n"
+    },
+    {
+        "text": "$rc ",
+        "type": "variable",
+        "displayText": "$rc ",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "The list of pseudo-variables",
+        "description": " Returned code\n\n\n$rc - reference to returned code by last invoked function\n\n\n$retcode - same as $rc\n\n"
+    },
+    {
+        "text": "$rd ",
+        "type": "variable",
+        "displayText": "$rd ",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "The list of pseudo-variables",
+        "description": " Domain in R\n\n\n$rd - reference to domain in request's URI (without port) or to the Namespace Specific String of a URN (see RFC 2141)\n\n\nIt is R/W variable (you can assign values to it directly in configuration file)\n\n"
+    },
+    {
+        "text": "$rdir(key) ",
+        "type": "variable",
+        "displayText": "$rdir(key) ",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "The list of pseudo-variables",
+        "description": " Request Direction\n\n\n$rdir(key) - get the direction of the request within dialog.\n\n\nThe direction is 'downstream' if sent by the caller and 'upstream' if sent by callee.\n\n\nThe key can be:\n\n\n id - the returned value is an integer: 1 - for direction downstream, 2 - for direction upstream\n\n name - the returned value is a string: 'downstream' or 'upstream'\n\n\n\nExample:\n\nif($rdir(name)==\"upstream\") {\n  xlog(\"request was sent by callee\\n\");\n}\n\nThe variable is exported by rr module and append_fromtag parameter must be enabled. The variable has to be used after loose_route() function.\n\n",
+        "snippet": "$rdir(${1:key}) "
+    },
+    {
+        "text": "$re ",
+        "type": "variable",
+        "displayText": "$re ",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "The list of pseudo-variables",
+        "description": " Remote\n\n\n$re - reference to Remote-Party-ID header URI\n\n"
+    },
+    {
+        "text": "$rm ",
+        "type": "variable",
+        "displayText": "$rm ",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "The list of pseudo-variables",
+        "description": " SIP method\n\n\n$rm - reference to request's method. Works also for replies (by using the CSeq header)\n\n"
+    },
+    {
+        "text": "$rmid ",
+        "type": "variable",
+        "displayText": "$rmid ",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "The list of pseudo-variables",
+        "description": " SIP Method ID\n\n\n$rmid - returns internal integer representation of SIP method type\n\n"
+    },
+    {
+        "text": "$route_uri ",
+        "type": "variable",
+        "displayText": "$route_uri ",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "The list of pseudo-variables",
+        "description": " URI in first Route header\n\n\n$route_uri - returns the string with URI field in the first Route header\n\n"
+    },
+    {
+        "text": "$rp ",
+        "type": "variable",
+        "displayText": "$rp ",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "The list of pseudo-variables",
+        "description": " Port in R\n\n\n$rp - reference to port of R-URI\n\n\nIt is R/W variable (you can assign values to it directly in configuration file)\n\n"
+    },
+    {
+        "text": "$rP ",
+        "type": "variable",
+        "displayText": "$rP ",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "The list of pseudo-variables",
+        "description": " Protocol of R\n\n\n$rP - reference to transport protocol of R-URI\n\n"
+    },
+    {
+        "text": "$rr ",
+        "type": "variable",
+        "displayText": "$rr ",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "The list of pseudo-variables",
+        "description": " SIP reply reason phrase\n\n\n$rr - reference to reply's reason phrase (the text after reply code)\n\n"
+    },
+    {
+        "text": "$rs ",
+        "type": "variable",
+        "displayText": "$rs ",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "The list of pseudo-variables",
+        "description": " SIP reply code\n\n\n$rs - reference to reply's status (status-code, response-code, reply-code)\n\n"
+    },
+    {
+        "text": "$rt ",
+        "type": "variable",
+        "displayText": "$rt ",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "The list of pseudo-variables",
+        "description": " Refer\n\n\n$rt - reference to URI of refer-to header\n\n"
+    },
+    {
+        "text": "$ru ",
+        "type": "variable",
+        "displayText": "$ru ",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "The list of pseudo-variables",
+        "description": " Request URI\n\n\n$ru - reference to request's URI (address in the first line of a SIP request)\n\n\nIt is R/W variable (you can assign values to it directly in configuration file)\n\n"
+    },
+    {
+        "text": "$rU ",
+        "type": "variable",
+        "displayText": "$rU ",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "The list of pseudo-variables",
+        "description": " Username in R\n\n\n$rU - reference to username in request's URI or to the Namespace Identifier of a URN (see RFC 2141)\n\n\nIt is R/W variable (you can assign values to it directly in configuration file)\n\n"
+    },
+    {
+        "text": "$rv ",
+        "type": "variable",
+        "displayText": "$rv ",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "The list of pseudo-variables",
+        "description": " SIP message version\n\n\n$rv - reference to SIP message (reply or request) version\n\n"
+    },
+    {
+        "text": "$ruid ",
+        "type": "variable",
+        "displayText": "$ruid ",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "The list of pseudo-variables",
+        "description": " Record internal Unique ID\n\n\n$ruid - the Record internal Unique ID for the location record selected by calling registrar:lookup()\n\n"
+    },
+    {
+        "text": "$rz ",
+        "type": "variable",
+        "displayText": "$rz ",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "The list of pseudo-variables",
+        "description": " URI Scheme of R\n\n\n$rz - returns R-URI scheme, possible values: sip, sips, tel, tels and urn, R-URI scheme parsing error should be reflected by value: none\n\n"
+    },
+    {
+        "text": "$RAi ",
+        "type": "variable",
+        "displayText": "$RAi ",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "The list of pseudo-variables",
+        "description": " Received advertised IP address\n\n\n$RAi - reference to advertised IP address of the interface where the request has been received, or $Ri if no advertised address.\n\n"
+    },
+    {
+        "text": "$RAp ",
+        "type": "variable",
+        "displayText": "$RAp ",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "The list of pseudo-variables",
+        "description": " Received advertised port\n\n\n$RAp - reference to advertised port where the request has been received, or $Rp if no advertised port.\n\n"
+    },
+    {
+        "text": "$Ri ",
+        "type": "variable",
+        "displayText": "$Ri ",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "The list of pseudo-variables",
+        "description": " Received IP address\n\n\n$Ri - reference to IP address of the interface where the request has been received\n\n"
+    },
+    {
+        "text": "$Rp ",
+        "type": "variable",
+        "displayText": "$Rp ",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "The list of pseudo-variables",
+        "description": " Received port\n\n\n$Rp - reference to the port where the message was received\n\n"
+    },
+    {
+        "text": "$RAu ",
+        "type": "variable",
+        "displayText": "$RAu ",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "The list of pseudo-variables",
+        "description": " Advertised socket URI\n\n\n$RAu - local socket where the SIP messages was received in URI format, without transport parameter for UDP, using advertised address when available.\n\n"
+    },
+    {
+        "text": "$RAut ",
+        "type": "variable",
+        "displayText": "$RAut ",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "The list of pseudo-variables",
+        "description": " Advertised socket URI\n\n\n$RAut - local socket where the SIP messages was received in URI format, always with transport parameter, using advertised address when available.\n\n"
+    },
+    {
+        "text": "$Ru ",
+        "type": "variable",
+        "displayText": "$Ru ",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "The list of pseudo-variables",
+        "description": " Received socket URI\n\n\n$Ru - local socket where the SIP messages was received in URI format, without transport parameter for UDP.\n\n"
+    },
+    {
+        "text": "$Rut ",
+        "type": "variable",
+        "displayText": "$Rut ",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "The list of pseudo-variables",
+        "description": " Received socket URI\n\n\n$Rut - local socket where the SIP messages was received in URI format, always with transport parameter.\n\n"
+    },
+    {
+        "text": "$sbranch(attr) ",
+        "type": "variable",
+        "displayText": "$sbranch(attr) ",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "The list of pseudo-variables",
+        "description": " Static Branch\n\n\n$sbranch(attr) - class of variables allowing to manage the values of attributes for static branch. The static branch is internal structure that is used by the functions sbranch_push_ruri() and sbranch_append() from pv module, enabling more flexibility in updating the R-URI (first) branch attributes as well as extra branches (e.g., for parallel forking).\n\n\nThe attr can be any of the supported values for $branch(attr) class of variables \u2013 see above for proper details.\n\n\nExample of usage:\n\nsbranch_reset();\n$sbranch(uri) = \"sip:127.0.0.1:5080\";\n$sbranch(dst_uri) = \"sip:127.0.0.1:5090\";\n$sbranch(path) = \"sip:127.0.0.1:5090, sip:127.0.0.1:5094\";\n$sbranch(send_socket) = \"udp:127.0.0.1:5060\";\nsbranch_set_ruri();\n",
+        "snippet": "$sbranch(${1:attr}) "
+    },
+    {
+        "text": "$sf ",
+        "type": "variable",
+        "displayText": "$sf ",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "The list of pseudo-variables",
+        "description": " Script flags\n\n\n$sf - reference to script flags - decimal output\n\n"
+    },
+    {
+        "text": "$sF ",
+        "type": "variable",
+        "displayText": "$sF ",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "The list of pseudo-variables",
+        "description": " Script flags\n\n\n$sF - reference to script flags - hexa output\n\n"
+    },
+    {
+        "text": "$si ",
+        "type": "variable",
+        "displayText": "$si ",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "The list of pseudo-variables",
+        "description": " Source IP address\n\n\n$si - reference to IP source address of the message - see also $siz\n\n"
+    },
+    {
+        "text": "$siz ",
+        "type": "variable",
+        "displayText": "$siz ",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "The list of pseudo-variables",
+        "description": " Source IP address\n\n\n$siz - reference to IP source address of the message, with enclosing square brackets for IPv6\n\n"
+    },
+    {
+        "text": "$sp ",
+        "type": "variable",
+        "displayText": "$sp ",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "The list of pseudo-variables",
+        "description": " Source port\n\n\n$sp - reference to the source port of the message\n\n"
+    },
+    {
+        "text": "$stat(name) ",
+        "type": "variable",
+        "displayText": "$stat(name) ",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "The list of pseudo-variables",
+        "description": " Statistics\n\n\n$stat(name) - return the value of statistic item specified by 'name'\n\n",
+        "snippet": "$stat(${1:name}) "
+    },
+    {
+        "text": "$su ",
+        "type": "variable",
+        "displayText": "$su ",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "The list of pseudo-variables",
+        "description": " Source address as URI\n\n\n$su - returns the representation of source address (ip, port, proto) as SIP URI. If the proto is UDP, then it is not added (being the default transport protocol).\n\n\nIts value looks like:\n\n\"sip:ip:port\" -- if proto is UDP\n\"sip:ip:port;transport=proto\"  -- if proto is not UDP\n\nNote that WS and WSS are both represented by transport=ws, conforming with the IETF RFC for SIP over WebSocket.\n\n"
+    },
+    {
+        "text": "$sut ",
+        "type": "variable",
+        "displayText": "$sut ",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "The list of pseudo-variables",
+        "description": " Source address as full URI\n\n\n$sut - returns the representation of source address (ip, port, proto) as full SIP URI. The proto UDP is added also as transport parameter.\n\n\nIts value looks like:\n\n\"sip:ip:port;transport=proto\"\n"
+    },
+    {
+        "text": "$td ",
+        "type": "variable",
+        "displayText": "$td ",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "The list of pseudo-variables",
+        "description": " To URI Domain\n\n\n$td - reference to domain in URI of 'To' header\n\n"
+    },
+    {
+        "text": "$tn ",
+        "type": "variable",
+        "displayText": "$tn ",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "The list of pseudo-variables",
+        "description": " To display name\n\n\n$tn - reference to display name of 'To' header\n\n"
+    },
+    {
+        "text": "$tt ",
+        "type": "variable",
+        "displayText": "$tt ",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "The list of pseudo-variables",
+        "description": " To tag\n\n\n$tt - reference to tag parameter of 'To' header\n\n"
+    },
+    {
+        "text": "$tti ",
+        "type": "variable",
+        "displayText": "$tti ",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "The list of pseudo-variables",
+        "description": " Initial To tag\n\n\n$tti - reference to tag parameter of 'To' header as it was in the SIP response to the initial request (e.g., 200ok to the initial INVITE).\n\n\nThe value To tag in the initial transaction can be in the From tag, if the request within the dialog is sent by the callee. This variable detect who sent the request within the dialog and returns the proper value that was in the To tag of the transaction initiating the dialog.\n\n\nIt is exported by rr module and has to be used after loose_route(). The append_fromtag parameter is required to be set to 1 in order to have this variable returning the right value.\n\n"
+    },
+    {
+        "text": "$tu ",
+        "type": "variable",
+        "displayText": "$tu ",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "The list of pseudo-variables",
+        "description": " To URI\n\n\n$tu - reference to URI of 'To' header\n\n"
+    },
+    {
+        "text": "$tU ",
+        "type": "variable",
+        "displayText": "$tU ",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "The list of pseudo-variables",
+        "description": " To URI Username\n\n\n$tU - reference to username in URI of 'To' header\n\n"
+    },
+    {
+        "text": "$Tb ",
+        "type": "variable",
+        "displayText": "$Tb ",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "The list of pseudo-variables",
+        "description": " Startup timestamp\n\n\n$Tb - reference to unix timestamp of the time at which kamailio was started (boot time)\n\n"
+    },
+    {
+        "text": "$Tf ",
+        "type": "variable",
+        "displayText": "$Tf ",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "The list of pseudo-variables",
+        "description": " String formatted time \n\n\n$Tf - reference string formatted time\n\n\nNote: the system time is retrieved only once for each processed SIP message. Subsequent calls of $Tf for same SIP message will return same value.\n\n"
+    },
+    {
+        "text": "$TF ",
+        "type": "variable",
+        "displayText": "$TF ",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "The list of pseudo-variables",
+        "description": " String formatted time \n\n\n$TF - reference string formatted time\n\n\nNote: the system time is computed for each call of $TF. Subsequent calls of $TF for same SIP message may return different values.\n\n"
+    },
+    {
+        "text": "$Ts ",
+        "type": "variable",
+        "displayText": "$Ts ",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "The list of pseudo-variables",
+        "description": " Unix time stamp \n\n\n$Ts - reference to unix time stamp\n\n\nNote: the system time is retrieved only once for each processed SIP message. Subsequent calls of $Ts for same SIP message will return same value. \n\n"
+    },
+    {
+        "text": "$TS ",
+        "type": "variable",
+        "displayText": "$TS ",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "The list of pseudo-variables",
+        "description": " Unix time stamp \n\n\n$TS - reference to unix time stamp\n\n\nNote: the system time is computed for each call of $TS. Subsequent calls of $TS for same SIP message may return different values.\n\n"
+    },
+    {
+        "text": "$ua ",
+        "type": "variable",
+        "displayText": "$ua ",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "The list of pseudo-variables",
+        "description": " User agent header\n\n\n$ua - reference to user agent header field\n\n"
+    },
+    {
+        "text": "$version() ",
+        "type": "variable",
+        "displayText": "$version() ",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "The list of pseudo-variables",
+        "description": " version\n\n\n$version(num) - version as number\n\n\n$version(full) - full version string \u201cname version architecture/platform\u201d\n\n\n$version(hash) - TBA\n\n",
+        "snippet": "$version(${1:}) "
+    },
+    {
+        "text": "$sndfrom(name)",
+        "type": "variable",
+        "displayText": "$sndfrom(name)",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "Send Address Attributes",
+        "description": "$sndfrom(name)\n\n\n$snd(name) - return attributes of the address from where the request is going to be sent (local socket).\n\n\n$sndfrom(name) - return attributes of the address from where the request is going to be sent (local socket, same as $snd(name)).\n\n\nThe name can have same values as for $sndto(\u2026).\n\n",
+        "snippet": "$sndfrom(${1:name})"
+    },
+    {
+        "text": "$sndto(name)",
+        "type": "variable",
+        "displayText": "$sndto(name)",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "Send Address Attributes",
+        "description": "$sndto(name)\n\n\n$sndto(name) - return attributes of the address to where the request is going to be sent (remote socket).\n\n\nThey are available in onsend_route. The name can be:\n\n\n ip - IP address of destination\n\n af - address family to be used to send (numeric)\n\n port - port of destination address\n\n proto - transport protocol to be used to send (numeric)\n\n sproto - transport protocol to be used to send (string)\n\n buf - entire send buffer as string\n\n len - length of outgoing packet (length of above buf)\n\n\n\nExample:\n\nonsend_route {\nif($snd(ip)==10.10.10.10)\n{\n    ...\n  }\n}\n",
+        "snippet": "$sndto(${1:name})"
+    },
+    {
+        "text": "$BM_time_diff",
+        "type": "variable",
+        "displayText": "$BM_time_diff",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "Benchmark module Pseudo-Variables",
+        "description": "$BM_time_diff\n\n\n$BM_time_diff - the time difference elapsed between calls of bm_start_timer(name) and bm_log_timer(name). The value is 0 if no bm_log_timer() was called. \n\n"
+    },
+    {
+        "text": "$dlg(attr)",
+        "type": "variable",
+        "displayText": "$dlg(attr)",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "Dialog module Pseudo-Variables",
+        "description": "$dlg(attr)\n\n\nReturn the attribute of the current processed dialog.\n\n\nIt is R/O variable.\n\n\nThe 'attr' can be:\n\n\n h_id - hash id\n\n h_entry - hash entry\n\n ref - reference count\n\n state - state of dialog\n\n to_rs - To route set\n\n from_rs - From route set\n\n dflags - dialog internal flags\n\n sflags - dialog script flags\n\n callid - sip call id\n\n to_uri - To uri\n\n to_tag - To tag\n\n from_uri - From uri\n\n from_tag - From tag\n\n toroute - timeout route\n\n lifetime - timeout inteval\n\n start_ts - start timestamp\n\n to_cseq - To CSeq\n\n from_cseq - From CSeq\n\n to_contact - To contact address\n\n from_contact - From contact address\n\n to_bindaddr - To bind address\n\n from_bindaddr - From bind address\n\n\n",
+        "snippet": "$dlg(${1:attr})"
+    },
+    {
+        "text": "$dlg_ctx(attr)",
+        "type": "variable",
+        "displayText": "$dlg_ctx(attr)",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "Dialog module Pseudo-Variables",
+        "description": "$dlg_ctx(attr)\n\n\nReturn the attribute of the context for current processed dialog.\n\n\nSome of the attributes are R/W variables.\n\n\nThe 'attr' can be:\n\n\n set - returns 1 if the dialog for current context is set, 0 otherwise\n\n flags - get/set dialog flags\n\n timeout_route - get/set route name to be executed on timeout\n\n timeout_route_id - get internal id for the route to be executed on timeout\n\n timeout_bye - set to 1 if BYE has to be sent when dialog lifetime elapses\n\n timeout - set the dialog lifetime (in seconds)\n\n on - get/set an integer value associated with the context (cfg usage)\n\n dir - get direction of the request for the dialog of the current context (0 - unknown, 1 - downstream, 2 - upstream)\n\n\n",
+        "snippet": "$dlg_ctx(${1:attr})"
+    },
+    {
+        "text": "$dlg_var(key)",
+        "type": "variable",
+        "displayText": "$dlg_var(key)",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "Dialog module Pseudo-Variables",
+        "description": "$dlg_var(key)\n\n\nStore and retrieve custom variable for current processed dialog.\n\n\nIt is R/W variable.\n\n\nThe 'key' can be any string.\n\n",
+        "snippet": "$dlg_var(${1:key})"
+    },
+    {
+        "text": "Erlang pseudo",
+        "type": "variable",
+        "displayText": "Erlang pseudo",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "Erlang module Pseudo-Variables",
+        "description": "variable attributes\n\n\n* type - get variable type. Possible types are: atom, integer, list, string, tuple, pid and ref.\n\n\n* length - get length of list or tuple.\n\n\n* format - prints a term, in clear text. It tries to resemble the term printing in the Erlang shell.\n\n"
+    },
+    {
+        "text": "$erl_atom(name)",
+        "type": "variable",
+        "displayText": "$erl_atom(name)",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "Erlang module Pseudo-Variables",
+        "description": "$erl_atom(name)\n\n\n$erl_atom(name) pseudo variable allows create analog to Erlang atom data type.\nErlang atom is a literal, a constant with name. Formatted output pseudo variable\natom could be enclosed in single quotes (') if it does not begin with a \nlower-case letter or if it contains other characters than alphanumeric characters,\nunderscore (_), or @.\n\n\nExample:\n\n$erl_atom(A) = node@host.tld;\n\nxlogl(L_DEBUG,$$erl_atom(A): $erl_atom(A=format)\\n);\n",
+        "snippet": "$erl_atom(${1:name})"
+    },
+    {
+        "text": "$erl_list(name)",
+        "type": "variable",
+        "displayText": "$erl_list(name)",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "Erlang module Pseudo-Variables",
+        "description": "$erl_list(name)\n\n\nCompound data type with a variable number of terms. Formally, a list is either\nthe empty list [] or consists of one or more elements.\n\n\nExample:\n\n$erl_atom(E) = example;\n$erl_list(L) = list;\n$erl_list(L) = of;\n$erl_list(L) = $erl_atom(E);\n\nxlogl(L_DEBUG,length(L): $erl_list(L=length), format(L): $erl_list(L=format)\\n);\n# empty list\n$erl_tuple(E[*]) = $null;\n",
+        "snippet": "$erl_list(${1:name})"
+    },
+    {
+        "text": "$erl_tuple(name)",
+        "type": "variable",
+        "displayText": "$erl_tuple(name)",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "Erlang module Pseudo-Variables",
+        "description": "$erl_tuple(name)\n\n\nFrom the Erlang point of view the tuple compound data type with a fixed number\nof terms. The module implementation of tuple has the same behavior as the list.\n\n\nExample:\n\n$erl_atom(e) = error;\n\n$erl_tuple(T) = badrpc;\n$erl_tuple(T) = $erl_atom(e);\n\nxlogl(L_DEBUG,length(T): $erl_tuple(T=length), format(T): $erl_tuple(T=format)\\n);\n",
+        "snippet": "$erl_tuple(${1:name})"
+    },
+    {
+        "text": "$erl_pid(name)",
+        "type": "variable",
+        "displayText": "$erl_pid(name)",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "Erlang module Pseudo-Variables",
+        "description": "$erl_pid(name)\n\n\nHolds Eralng process identifier. Provides access to Erlang PID value and could\nbe used in send message.\n\n",
+        "snippet": "$erl_pid(${1:name})"
+    },
+    {
+        "text": "$erl_ref(name)",
+        "type": "variable",
+        "displayText": "$erl_ref(name)",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "Erlang module Pseudo-Variables",
+        "description": "$erl_ref(name)\n\n\nHolds Erlang reference. Provides access to reference value and could be used in\nsend message.\n\n",
+        "snippet": "$erl_ref(${1:name})"
+    },
+    {
+        "text": "$erl_xbuff(name)",
+        "type": "variable",
+        "displayText": "$erl_xbuff(name)",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "Erlang module Pseudo-Variables",
+        "description": "$erl_xbuff(name)\n\n\nGeneric pseudo variable to acts as other pseudo variables exported from Erlang\nmodule.\n\n",
+        "snippet": "$erl_xbuff(${1:name})"
+    },
+    {
+        "text": "$sht(htable=key)",
+        "type": "variable",
+        "displayText": "$sht(htable=key)",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "HTable module Pseudo-Variables",
+        "description": "$sht(htable=key)\n\n\nAccess hash table entries.\n\n\nIt is R/W variable, you can assign values to it directly in configuration file.  Hash table entry can be deleted by assigning value $null to it.\n\n\nThe \u201chtname\u201d must be a hash table name defined via \u201chtable\u201d parameter.\n\n\nThe \u201ckey\u201d can be:\n\n\n static string - set of characters without pseudo-variables\n\n dynamic string - set of characters that include pseudo-variables. The pseudo-variables will be evaluated at runtime.\n\n\n...\nmodparam(htable, htable, a=size=4;)\n...\n$sht(a=$au) = 1;\n$sht(a=$ru) = $fu;\n...\n"
+    },
+    {
+        "text": "$shtex(htable=key)",
+        "type": "variable",
+        "displayText": "$shtex(htable=key)",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "HTable module Pseudo-Variables",
+        "description": "$shtex(htable=key)\n\n\nAccess hash table entry expire value. Value represents the seconds until the htable entry will expire and be deleted from htable.\n\n\nIt is R/W variable, you can assign values to it directly in configuration file.\n\n\nThe \u201chtname\u201d must be a hash table name defined via \u201chtable\u201d parameter and have auto-expire greater than 0.\n\n\nThe \u201ckey\u201d can be:\n\n\n static string - set of characters without pseudo-variables\n\n dynamic string - set of characters that include pseudo-variables. The pseudo-variables will be evaluated at runtime.\n\n\n...\nmodparam(htable, htable, a=size=4;autoexpire=120;)\n...\n$sht(a=$au) = 1;\n$shtex(a=$au) = 10;\n...\n"
+    },
+    {
+        "text": "$shtcn(htable=exp)",
+        "type": "variable",
+        "displayText": "$shtcn(htable=exp)",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "HTable module Pseudo-Variables",
+        "description": "$shtcn(htable=exp)\n\n\nCount items matching the name by regexp.\n\n\nThe \u201chtname\u201d must be a hash table name defined via \u201chtable\u201d parameter.\n\n\nThe exp can be:\n\n\n reqexp - match by regular expression 'regexp'\n\n ~~regexp - match by regular expression 'regexp'\n\n ~%prefix - match by right prefix\n\n %~prefix - match by left prefix\n\n ==value - match by string value\n\n eqvalue - match by integer value\n\n * * - (two asterisks next to each other) - count all items\n\n\n\nThe exp can contain pseudo-variables.\n\n...\nmodparam(htable, htable, a=size=4;)\n...\n$sht(a=abc) = 1;\n$shtex(a=ade) = 10;\nxlog($shtcn(a=a.*));\n...\n"
+    },
+    {
+        "text": "$shtcv(htable=exp)",
+        "type": "variable",
+        "displayText": "$shtcv(htable=exp)",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "HTable module Pseudo-Variables",
+        "description": "$shtcv(htable=exp)\n\n\nCount items matching the value by regexp.\n\n\nThe \u201chtname\u201d must be a hash table name defined via \u201chtable\u201d parameter.\n\n\nThe exp must follow same rules as for $shtcn(\u2026).\n\n...\nmodparam(htable, htable, a=size=4;)\n...\n$sht(a=abc) = xyz;\n$shtex(a=ade) = xwt;\nxlog($shtcv(a=x.*));\n...\n"
+    },
+    {
+        "text": "$shtinc(htable=key)",
+        "type": "variable",
+        "displayText": "$shtinc(htable=key)",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "HTable module Pseudo-Variables",
+        "description": "$shtinc(htable=key)\n\n\nAtomic increment of the value for the hash table item.\n\n...\nmodparam(htable, htable, a=size=4;)\n...\n$sht(a=$au) = 1;\nxlog(==== $shtinc(a=$au)\\n);\n...\n"
+    },
+    {
+        "text": "$shtdec(htable=key)",
+        "type": "variable",
+        "displayText": "$shtdec(htable=key)",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "HTable module Pseudo-Variables",
+        "description": "$shtdec(htable=key)\n\n\nAtomic decrement of the value for the hash table item.\n\n...\nmodparam(htable, htable, a=size=4;)\n...\n$sht(a=$au) = 1;\nxlog(==== $shtdec(a=$au)\\n);\n...\n"
+    },
+    {
+        "text": "$shtitkey(iname)",
+        "type": "variable",
+        "displayText": "$shtitkey(iname)",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "HTable module Pseudo-Variables",
+        "description": "$shtitkey(iname)\n\n\nThe key at the current position in the iterator.\n\n",
+        "snippet": "$shtitkey(${1:iname})"
+    },
+    {
+        "text": "$shtitval(iname)",
+        "type": "variable",
+        "displayText": "$shtitval(iname)",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "HTable module Pseudo-Variables",
+        "description": "$shtitval(iname)\n\n\nThe value at the current position in the iterator.\n\n\nExample:\n\n    sht_iterator_start(i1, h1);\nwhile(sht_iterator_next(i1)) {\n        xlog(h1[$shtitkey(i1)] is: $shtitval(i1)\\n);\n}\n    sht_iterator_end(i1);\n",
+        "snippet": "$shtitval(${1:iname})"
+    },
+    {
+        "text": "$shtrecord(id)",
+        "type": "variable",
+        "displayText": "$shtrecord(id)",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "HTable module Pseudo-Variables",
+        "description": "$shtrecord(id)\n\n\nGet the key or the value of expired item inside the event_route[htable:expired:_table_name_].\n\n\nThe id can be:\n\n\n key\n\n value\n\n\n\nExample:\n\nevent_route[htable:expired:h1] {\n  xlog(expired item ($shtrecord(key),$shtrecord(value))\\n);\n}\n",
+        "snippet": "$shtrecord(${1:id})"
+    },
+    {
+        "text": "$mct(key)",
+        "type": "variable",
+        "displayText": "$mct(key)",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "Memcached module Pseudo-Variables",
+        "description": "$mct(key)\n\n\nAccess hash table entries stored in the memcached server.\n\n\nIt is R/W variable, you can assign values to it directly in configuration file.\n\n\nThe \u201ckey\u201d can be:\n\n\n static string - set of characters without pseudo-variables\n\n dynamic string - set of characters that include pseudo-variables. The pseudo-variables will be evaluated at runtime.\n\n\n\nWhen assigning values, the default expiry will be used.\n\n...\n$mct($au) = 1;\n$mct($ru) = $fu;\n$mct(test) = 1;\nxlog(stored value is $mct(test));\n$mct(test) = null; # delete it\nxlog(stored value is $mct(test)); # will return null\n...\n",
+        "snippet": "$mct(${1:key})"
+    },
+    {
+        "text": "$mct(key=expiry)",
+        "type": "variable",
+        "displayText": "$mct(key=expiry)",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "Memcached module Pseudo-Variables",
+        "description": "$mct(key=expiry)\n\n\nUsing this alternative format, the default expiry may be overidden by including a custom value at time of assignment.\n\n...\n$mct(test=30) = 1; # set expire time to 30 seconds\nxlog(stored value is $mct(test));\n# sleep 30 seconds\nxlog(stored value is $mct(test)); # will return null\n...\n"
+    },
+    {
+        "text": "$mcinc(key)",
+        "type": "variable",
+        "displayText": "$mcinc(key)",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "Memcached module Pseudo-Variables",
+        "description": "$mcinc(key)\n\n\nDo a atomic increment operation on the value stored in memcached. You need to add a value previously.\n\n\nIt is R/W variable, you can assign values to it directly in configuration file.\n\n\nThe \u201ckey\u201d can be:\n\n\n static string - set of characters without pseudo-variables\n\n dynamic string - set of characters that include pseudo-variables. The pseudo-variables will be evaluated at runtime.\n\n\n...\n$mct(cnt) = 1;\n$mcinc(cnt) = 2; # increment by 2\nxlog(counter is now $mct(cnt));\n...\n",
+        "snippet": "$mcinc(${1:key})"
+    },
+    {
+        "text": "$mcdec(key)",
+        "type": "variable",
+        "displayText": "$mcdec(key)",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "Memcached module Pseudo-Variables",
+        "description": "$mcdec(key)\n\n\nDo a atomic decrement operation on the value stored in memcached. You need to add a value previously.\n\n\nIt is R/W variable, you can assign values to it directly in configuration file.\n\n\nThe \u201ckey\u201d can be:\n\n\n static string - set of characters without pseudo-variables\n\n dynamic string - set of characters that include pseudo-variables. The pseudo-variables will be evaluated at runtime.\n\n\n...\n$mct(cnt) = 10;\n$mcdec(cnt) = 2; # decrement by 2\nxlog(counter is now $mct(cnt));\n...\n",
+        "snippet": "$mcdec(${1:key})"
+    },
+    {
+        "text": "$xml(name=spec)",
+        "type": "variable",
+        "displayText": "$xml(name=spec)",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "XMLOPS Pseudo-Variables",
+        "description": "$xml(name=spec)\n\n\n name - id to refer the documet\n\n spec - specifier:\n\n doc - set/get the document as text\n\n xpath:xpath-expression - evaluate xpath expression\n\n\n\n\n\nExample:\n\n$xml(x=doc) = '?xml version=1.0 encoding=UTF-8?abtest/b/a';\nxlog(content of node b: $xml(x=xpath:/a/b/text())\\n);\n$xml(x=xpath:/a/b) = 1234;\n"
+    },
+    {
+        "text": "$T_branch_idx",
+        "type": "variable",
+        "displayText": "$T_branch_idx",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "TMX module Pseudo-Variables",
+        "description": "$T_branch_idx\n\n\n the index (starting with 1 for the first branch) of the branch for which is executed the branch_route[]. If used outside of branch_route[] block, the value is '0'.\n\n\n"
+    },
+    {
+        "text": "$T_reply_ruid",
+        "type": "variable",
+        "displayText": "$T_reply_ruid",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "TMX module Pseudo-Variables",
+        "description": "$T_reply_ruid\n\n\n the ruid stored in the current branch of the transaction. The ruid is stored in a branch from the details in a contact binding. In a event_route[tm:branch-failure] block, this is the ruid of the branch that sent a failure reply. In a failure_route[] block, this is the ruid of the winning failure response.\n\n\n"
+    },
+    {
+        "text": "$T_reply_code",
+        "type": "variable",
+        "displayText": "$T_reply_code",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "TMX module Pseudo-Variables",
+        "description": "$T_reply_code\n\n\n the code of the reply, as follows: in request_route will be the last stateful sent reply; in reply_route will be the current processed reply; in failure_route will be the negative winning reply. In case of no-reply or error, '0' value is returned\n\n\n"
+    },
+    {
+        "text": "$T_req(pv)",
+        "type": "variable",
+        "displayText": "$T_req(pv)",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "TMX module Pseudo-Variables",
+        "description": "$T_req(pv)\n\n\n can be used in reply routes or inside the modules to get access to attributes of the request belonging to same transaction as the reply\n\n\nroute {\n  t_on_reply(1);\n  t_relay();\n}\n\nonreply_route[1] {\n  xlog(Request SRCIP:PORT = $T_req($si):$T_req($sp)\\n);\n}\n",
+        "snippet": "$T_req(${1:pv})"
+    },
+    {
+        "text": "$T_rpl(pv)",
+        "type": "variable",
+        "displayText": "$T_rpl(pv)",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "TMX module Pseudo-Variables",
+        "description": "$T_rpl(pv)\n\n\n can be used in failure routes or inside the modules to get access to attributes of the winning reply belonging to same transaction as the request\n\n\nroute {\n  t_on_failure(1);\n  t_relay();\n}\n\nfailure_route[1] {\n  xlog(Reply SRCIP:PORT = $T_rpl($si):$T_rpl($sp)\\n);\n}\n",
+        "snippet": "$T_rpl(${1:pv})"
+    },
+    {
+        "text": "$T_inv(pv)",
+        "type": "variable",
+        "displayText": "$T_inv(pv)",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "TMX module Pseudo-Variables",
+        "description": "$T_inv(pv)\n\n\n can be used in request routes or inside the modules to get access to attributes of the INVITE request while processing a CANCEL.\n\n\nroute {\n  if(is_method(CANCEL))\n  {\n     if($T_inv($mf)  1 )\n     {\n        # first flag is set in the INVITE transaction\n     }\n  }\n}\n",
+        "snippet": "$T_inv(${1:pv})"
+    },
+    {
+        "text": "$T(name)",
+        "type": "variable",
+        "displayText": "$T(name)",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "TMX module Pseudo-Variables",
+        "description": "$T(name)\n\n\n pseudo-variable class to access TM attributes\n\n\n\nThe name can be:\n\n\n id_index - return the internal index of current transaction or $null if not transaction is found\n\n id_label - return the internal label of current transaction or $null if not transaction is found\n\n id_index_n - return the internal index of current transaction, if no transaction exists yet, create it\n\n id_label_n - return the internal label of current transaction, if no transaction exists yet, create it\n\n reply_code - reply code (alias to $T_reply_code)\n\n reply_reason - reply reason\n\n reply_last - last received reply code\n\n branch_index - branch index (alias to $T_branch_idx)\n\n ruid - return the internal location ruid field for current branch\n\n reply_type - 1 if it is a local generated reply, 0 - if no reply for transaction or it is a received reply\n\n\n\nNote: the pair (id_index,id_label) uniquely identifies a transaction.\n\n",
+        "snippet": "$T(${1:name})"
+    },
+    {
+        "text": "$T_branch(name)",
+        "type": "variable",
+        "displayText": "$T_branch(name)",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "TMX module Pseudo-Variables",
+        "description": "$T_branch(name)\n\n\n pseudo-variable class to access TM branch attributes\n\n\n\nThe name can be:\n\n\n flags - Flags of the branch. In a event_route[tm:branch-failure] block, this is the flags of the branch that sent a failure reply. In a failure_route[] block, this is the flags of the winning failure response.\n\n uri - the R-URI of the branch. Can be used in onreply_route[id] - reply route blocks executed by tm module. For other routing blocks handling requests, the R-URI is returned by $ru\n\n\n",
+        "snippet": "$T_branch(${1:name})"
+    },
+    {
+        "text": "$uac_req(key)",
+        "type": "variable",
+        "displayText": "$uac_req(key)",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "UAC module Pseudo-Variables",
+        "description": "$uac_req(key)\n\n\n used to build the input for uac_send_req() function of UAC module\n\n\n\nThe key can be:\n\n\n method - SIP method\n\n ruri - request URI\n\n furi - From URI\n\n turi - To URI\n\n ouri - Outbound proxy URI\n\n hdrs - SIP Headers\n\n body - Body\n\n auser - authentication username\n\n apasswd - authentication password\n\n sock - local socket to be used for sending (proto:address:port)\n\n callid - SIP-Call-ID of the generated request (by default, a call-id is generated)\n\n all - alias useful to reset all fields - $uac_req(all) = $null;\n\n evroute - it has to be set to 1 in order to execute event_route[uac:reply] when reply is received\n\n evcode - reply code for the request sent with uac_req_send(), available inside event_route[uac:reply]\n\n evtype - is 1 if the reply was received via network, 2 if the reply was locally generated (e.g., retransmission timeout), available inside event_route[uac:reply]\n\n evparam - generic data buffer associated with the request that can be set before sending it and retrieved when executing the event route. It has a size of 128 characters.\n\n\n$uac_req(method)=OPTIONS;\n$uac_req(ruri)=sip:kamailio.org;\n$uac_req(furi)=sip:kamailio.org;\n$uac_req(turi)=sip:kamailio.org;\n$uac_req(evroute) = 1;\nuac_req_send();\n...\nevent_route[uac:reply] {\n  xlog(request sent to $uac_req(ruri) completed with code: $uac_req(evcode)\\n);\n}\n",
+        "snippet": "$uac_req(${1:key})"
+    },
+    {
+        "text": "$rr_count",
+        "type": "variable",
+        "displayText": "$rr_count",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "Nathelper module Pseudo-Variables",
+        "description": "$rr_count\n\n\n Number of Record Routes in received SIP request or reply.\n\n\n"
+    },
+    {
+        "text": "$rr_top_count",
+        "type": "variable",
+        "displayText": "$rr_top_count",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "Nathelper module Pseudo-Variables",
+        "description": "$rr_top_count\n\n\n If topmost Record Route in received SIP request or reply is a double Record Route, value of $rr_top_count is 2. If it a single Record Route, value of $rr_top_count is 1. If there is no Record Route(s), value of $rr_top_count is 0.\n\n\n"
+    },
+    {
+        "text": "$mqk(q)",
+        "type": "variable",
+        "displayText": "$mqk(q)",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "MQueue module Pseudo-Variables",
+        "description": "$mqk(q)\n\n\n return the key of fetched item from queue q\n\n\n",
+        "snippet": "$mqk(${1:q})"
+    },
+    {
+        "text": "$mqv(q)",
+        "type": "variable",
+        "displayText": "$mqv(q)",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "MQueue module Pseudo-Variables",
+        "description": "$mqv(q)\n\n\n return the value of fetched item from queue q\n\n\n...\nmq_add(myq, $rU, call from $fU at $Tf);\n...\nwhile(mq_fetch(myq))\n{\n   xlog($mqk(myq) - $mqv(myq)\\n);\n}\n...\n",
+        "snippet": "$mqv(${1:q})"
+    },
+    {
+        "text": "$TV(name)",
+        "type": "variable",
+        "displayText": "$TV(name)",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "TimeVal",
+        "description": "$TV(name)\n\n\nSeconds and microseconds taken from struct timeval.\n\n\n $TV(s) - seconds (cached at first call per sip message)\n\n $TV(u) - microseconds (cached at first call per sip message)\n\n $TV(sn) - seconds (not cached)\n\n $TV(un) - microseconds (not cached)\n\n $TV(Sn) - string representation seconds.microseconds (not cached)\n\n\n",
+        "snippet": "$TV(${1:name})"
+    },
+    {
+        "text": "$nh(key)",
+        "type": "variable",
+        "displayText": "$nh(key)",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "Next hop address",
+        "description": "$nh(key)\n\n\nReturn attributes of next hop for the SIP request. Address is taken from dst_uri, if set, if not from new r-uri or original r-uri.\n\n\n $nh(u) - uri (lower case u)\n\n $nh(U) - username (upper case u)\n\n $nh(d) - domain\n\n $nh(p) - port (lower case p)\n\n $nh(P) - transport protocol (upper case p)\n\n\n",
+        "snippet": "$nh(${1:key})"
+    },
+    {
+        "text": "$gip(pvc=key)",
+        "type": "variable",
+        "displayText": "$gip(pvc=key)",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "GeoIP module Pseudo-Variables",
+        "description": "$gip(pvc=key)\n\n\nVariables exported by GeoIP module, returning geo-location attributes. The attributes are populated upon calling function geoip_match(ipaddr, pvc).\n\n\npvc (container id) is second parameter of geoip_match(..) and key can be:\n\n\n cc - country code\n\n tz - time zone\n\n zip - postal code\n\n lat - latitude\n\n lon - longitude\n\n dma - dma code\n\n ips - ip start\n\n ipe - ip end\n\n city - city\n\n area - area code\n\n regc - region\n\n regn - region name\n\n metro - metro code\n\n contc - continent code\n\n\n\nYou can call several time geoip_match(ipaddr, pvc) with different ip address and containers in your config, to compare, for example, attributes of source and destination of a call.\n\ngeoip_match($si, src);\ngeoip_match($nh(d), dst);\nif($gip(src=cc)==$gip(dst=cc))\n{\n# source and destination from same country\n}\n"
+    },
+    {
+        "text": "$tls_version",
+        "type": "variable",
+        "displayText": "$tls_version",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "TLS module Pseudo-Variables",
+        "description": "$tls_version\n\n\nThe TLS/SSL version which is used on the TLS connection from which the message was received. String type.\n\n"
+    },
+    {
+        "text": "$tls_description",
+        "type": "variable",
+        "displayText": "$tls_description",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "TLS module Pseudo-Variables",
+        "description": "$tls_description\n\n\nThe TLS/SSL description of the TLS connection from which the message was received. String type.\n\n"
+    },
+    {
+        "text": "$tls_cipher_info",
+        "type": "variable",
+        "displayText": "$tls_cipher_info",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "TLS module Pseudo-Variables",
+        "description": "$tls_cipher_info\n\n\nThe TLS/SSL cipher which is used on the TLS connection from which the message was received. String type.\n\n"
+    },
+    {
+        "text": "$tls_cipher_bits",
+        "type": "variable",
+        "displayText": "$tls_cipher_bits",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "TLS module Pseudo-Variables",
+        "description": "$tls_cipher_bits\n\n\nThe number of cipher bits which are used on the TLS connection from which the message was received. String and Integer type.\n\n"
+    },
+    {
+        "text": "$tls_peer_version",
+        "type": "variable",
+        "displayText": "$tls_peer_version",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "TLS module Pseudo-Variables",
+        "description": "$tls_peer_version\n\n\nThe version of the certificate. String type.\n\n"
+    },
+    {
+        "text": "$tls_my_version",
+        "type": "variable",
+        "displayText": "$tls_my_version",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "TLS module Pseudo-Variables",
+        "description": "$tls_my_version\n\n\nThe version of the certificate. String type.\n\n"
+    },
+    {
+        "text": "$tls_peer_serial",
+        "type": "variable",
+        "displayText": "$tls_peer_serial",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "TLS module Pseudo-Variables",
+        "description": "$tls_peer_serial\n\n\nThe serial number of the certificate. String and Integer type.\n\n"
+    },
+    {
+        "text": "$tls_my_serial",
+        "type": "variable",
+        "displayText": "$tls_my_serial",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "TLS module Pseudo-Variables",
+        "description": "$tls_my_serial\n\n\nThe serial number of the certificate. String and Integer type.\n\n"
+    },
+    {
+        "text": "$tls_peer_subject",
+        "type": "variable",
+        "displayText": "$tls_peer_subject",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "TLS module Pseudo-Variables",
+        "description": "$tls_peer_subject\n\n\nASCII dump of the fields in the subject section of the certificate. String type. Example:\n\n  /C=AT/ST=Vienna/L=Vienna/O=enum.at/CN=enum.at\n"
+    },
+    {
+        "text": "$tls_peer_issuer",
+        "type": "variable",
+        "displayText": "$tls_peer_issuer",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "TLS module Pseudo-Variables",
+        "description": "$tls_peer_issuer\n\n\nASCII dump of the fields in the issuer section of the certificate. String type.\n\n"
+    },
+    {
+        "text": "$tls_my_subject",
+        "type": "variable",
+        "displayText": "$tls_my_subject",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "TLS module Pseudo-Variables",
+        "description": "$tls_my_subject\n\n\nASCII dump of the fields in the subject section of the certificate. String type.\n\n"
+    },
+    {
+        "text": "$tls_my_issuer",
+        "type": "variable",
+        "displayText": "$tls_my_issuer",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "TLS module Pseudo-Variables",
+        "description": "$tls_my_issuer\n\n\nASCII dump of the fields in the issuer section of the certificate. String type.\n\n"
+    },
+    {
+        "text": "$tls_peer_subject_cn",
+        "type": "variable",
+        "displayText": "$tls_peer_subject_cn",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "TLS module Pseudo-Variables",
+        "description": "$tls_peer_subject_cn\n\n\ncommonName in the subject section of the certificate. String type.\n\n"
+    },
+    {
+        "text": "$tls_peer_issuer_cn",
+        "type": "variable",
+        "displayText": "$tls_peer_issuer_cn",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "TLS module Pseudo-Variables",
+        "description": "$tls_peer_issuer_cn\n\n\ncommonName in the issuer section of the certificate. String type.\n\n"
+    },
+    {
+        "text": "$tls_my_subject_cn",
+        "type": "variable",
+        "displayText": "$tls_my_subject_cn",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "TLS module Pseudo-Variables",
+        "description": "$tls_my_subject_cn\n\n\ncommonName in the subject section of the certificate. String type.\n\n"
+    },
+    {
+        "text": "$tls_my_issuer_cn",
+        "type": "variable",
+        "displayText": "$tls_my_issuer_cn",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "TLS module Pseudo-Variables",
+        "description": "$tls_my_issuer_cn\n\n\ncommonName in the issuer section of the certificate. String type.\n\n"
+    },
+    {
+        "text": "$tls_peer_subject_locality",
+        "type": "variable",
+        "displayText": "$tls_peer_subject_locality",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "TLS module Pseudo-Variables",
+        "description": "$tls_peer_subject_locality\n\n\nlocalityName in the subject section of the certificate. String type.\n\n"
+    },
+    {
+        "text": "$tls_peer_issuer_locality",
+        "type": "variable",
+        "displayText": "$tls_peer_issuer_locality",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "TLS module Pseudo-Variables",
+        "description": "$tls_peer_issuer_locality\n\n\nlocalityName in the issuer section of the certificate. String type.\n\n"
+    },
+    {
+        "text": "$tls_my_subject_locality",
+        "type": "variable",
+        "displayText": "$tls_my_subject_locality",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "TLS module Pseudo-Variables",
+        "description": "$tls_my_subject_locality\n\n\nlocalityName in the subject section of the certificate. String type.\n\n"
+    },
+    {
+        "text": "$tls_my_issuer_locality",
+        "type": "variable",
+        "displayText": "$tls_my_issuer_locality",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "TLS module Pseudo-Variables",
+        "description": "$tls_my_issuer_locality\n\n\nlocalityName in the issuer section of the certificate. String type.\n\n"
+    },
+    {
+        "text": "$tls_peer_subject_country",
+        "type": "variable",
+        "displayText": "$tls_peer_subject_country",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "TLS module Pseudo-Variables",
+        "description": "$tls_peer_subject_country\n\n\ncountryName in the subject section of the certificate. String type.\n\n"
+    },
+    {
+        "text": "$tls_peer_issuer_country",
+        "type": "variable",
+        "displayText": "$tls_peer_issuer_country",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "TLS module Pseudo-Variables",
+        "description": "$tls_peer_issuer_country\n\n\ncountryName in the issuer section of the certificate. String type.\n\n"
+    },
+    {
+        "text": "$tls_my_subject_country",
+        "type": "variable",
+        "displayText": "$tls_my_subject_country",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "TLS module Pseudo-Variables",
+        "description": "$tls_my_subject_country\n\n\ncountryName in the subject section of the certificate. String type.\n\n"
+    },
+    {
+        "text": "$tls_my_issuer_country",
+        "type": "variable",
+        "displayText": "$tls_my_issuer_country",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "TLS module Pseudo-Variables",
+        "description": "$tls_my_issuer_country\n\n\ncountryName in the issuer section of the certificate. String type.\n\n"
+    },
+    {
+        "text": "$tls_peer_subject_state",
+        "type": "variable",
+        "displayText": "$tls_peer_subject_state",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "TLS module Pseudo-Variables",
+        "description": "$tls_peer_subject_state\n\n\nstateOrProvinceName in the subject section of the certificate. String type.\n\n"
+    },
+    {
+        "text": "$tls_peer_issuer_state",
+        "type": "variable",
+        "displayText": "$tls_peer_issuer_state",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "TLS module Pseudo-Variables",
+        "description": "$tls_peer_issuer_state\n\n\nstateOrProvinceName in the issuer section of the certificate. String type.\n\n"
+    },
+    {
+        "text": "$tls_my_subject_state",
+        "type": "variable",
+        "displayText": "$tls_my_subject_state",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "TLS module Pseudo-Variables",
+        "description": "$tls_my_subject_state\n\n\nstateOrProvinceName in the subject section of the certificate. String type.\n\n"
+    },
+    {
+        "text": "$tls_my_issuer_state",
+        "type": "variable",
+        "displayText": "$tls_my_issuer_state",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "TLS module Pseudo-Variables",
+        "description": "$tls_my_issuer_state\n\n\nstateOrProvinceName in the issuer section of the certificate. String type.\n\n"
+    },
+    {
+        "text": "$tls_peer_subject_organization",
+        "type": "variable",
+        "displayText": "$tls_peer_subject_organization",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "TLS module Pseudo-Variables",
+        "description": "$tls_peer_subject_organization\n\n\norganizationName in the subject section of the certificate. String type.\n\n"
+    },
+    {
+        "text": "$tls_peer_issuer_organization",
+        "type": "variable",
+        "displayText": "$tls_peer_issuer_organization",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "TLS module Pseudo-Variables",
+        "description": "$tls_peer_issuer_organization\n\n\norganizationName in the issuer section of the certificate. String type.\n\n"
+    },
+    {
+        "text": "$tls_my_subject_organization",
+        "type": "variable",
+        "displayText": "$tls_my_subject_organization",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "TLS module Pseudo-Variables",
+        "description": "$tls_my_subject_organization\n\n\norganizationName in the subject section of the certificate. String type.\n\n"
+    },
+    {
+        "text": "$tls_my_issuer_organization",
+        "type": "variable",
+        "displayText": "$tls_my_issuer_organization",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "TLS module Pseudo-Variables",
+        "description": "$tls_my_issuer_organization\n\n\norganizationName in the issuer section of the certificate. String type.\n\n"
+    },
+    {
+        "text": "$tls_peer_subject_unit",
+        "type": "variable",
+        "displayText": "$tls_peer_subject_unit",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "TLS module Pseudo-Variables",
+        "description": "$tls_peer_subject_unit\n\n\norganizationalUnitName in the subject section of the certificate. String type.\n\n"
+    },
+    {
+        "text": "$tls_peer_issuer_unit",
+        "type": "variable",
+        "displayText": "$tls_peer_issuer_unit",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "TLS module Pseudo-Variables",
+        "description": "$tls_peer_issuer_unit\n\n\norganizationalUnitName in the issuer section of the certificate. String type.\n\n"
+    },
+    {
+        "text": "$tls_my_subject_unit",
+        "type": "variable",
+        "displayText": "$tls_my_subject_unit",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "TLS module Pseudo-Variables",
+        "description": "$tls_my_subject_unit\n\n\norganizationalUnitName in the subject section of the certificate. String type.\n\n"
+    },
+    {
+        "text": "$tls_my_issuer_unit",
+        "type": "variable",
+        "displayText": "$tls_my_issuer_unit",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "TLS module Pseudo-Variables",
+        "description": "$tls_my_issuer_unit\n\n\norganizationalUnitName in the issuer section of the certificate. String type.\n\n"
+    },
+    {
+        "text": "$tls_peer_san_email",
+        "type": "variable",
+        "displayText": "$tls_peer_san_email",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "TLS module Pseudo-Variables",
+        "description": "$tls_peer_san_email\n\n\nemail address in the \u201csubject alternative name\u201d extension. String type.\n\n"
+    },
+    {
+        "text": "$tls_my_san_email",
+        "type": "variable",
+        "displayText": "$tls_my_san_email",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "TLS module Pseudo-Variables",
+        "description": "$tls_my_san_email\n\n\nemail address in the \u201csubject alternative name\u201d extension. String type.\n\n"
+    },
+    {
+        "text": "$tls_peer_san_hostname",
+        "type": "variable",
+        "displayText": "$tls_peer_san_hostname",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "TLS module Pseudo-Variables",
+        "description": "$tls_peer_san_hostname\n\n\nhostname (DNS) in the \u201csubject alternative name\u201d extension. String type.\n\n"
+    },
+    {
+        "text": "$tls_my_san_hostname",
+        "type": "variable",
+        "displayText": "$tls_my_san_hostname",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "TLS module Pseudo-Variables",
+        "description": "$tls_my_san_hostname\n\n\nhostname (DNS) in the \u201csubject alternative name\u201d extension. String type.\n\n"
+    },
+    {
+        "text": "$tls_peer_san_uri",
+        "type": "variable",
+        "displayText": "$tls_peer_san_uri",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "TLS module Pseudo-Variables",
+        "description": "$tls_peer_san_uri\n\n\nURI in the \u201csubject alternative name\u201d extension. String type.\n\n"
+    },
+    {
+        "text": "$tls_my_san_uri",
+        "type": "variable",
+        "displayText": "$tls_my_san_uri",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "TLS module Pseudo-Variables",
+        "description": "$tls_my_san_uri\n\n\nURI in the \u201csubject alternative name\u201d extension. String type.\n\n"
+    },
+    {
+        "text": "$tls_peer_san_ip",
+        "type": "variable",
+        "displayText": "$tls_peer_san_ip",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "TLS module Pseudo-Variables",
+        "description": "$tls_peer_san_ip\n\n\nip address in the \u201csubject alternative name\u201d extension. String type.\n\n"
+    },
+    {
+        "text": "$tls_my_san_ip",
+        "type": "variable",
+        "displayText": "$tls_my_san_ip",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "TLS module Pseudo-Variables",
+        "description": "$tls_my_san_ip\n\n\nip address in the \u201csubject alternative name\u201d extension. String type.\n\n"
+    },
+    {
+        "text": "$tls_peer_verified",
+        "type": "variable",
+        "displayText": "$tls_peer_verified",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "TLS module Pseudo-Variables",
+        "description": "$tls_peer_verified\n\n\nReturns 1 if the peer's certificate was successfully verified. Otherwise it returns 0. String and Integer type.\n\n"
+    },
+    {
+        "text": "$tls_peer_revoked",
+        "type": "variable",
+        "displayText": "$tls_peer_revoked",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "TLS module Pseudo-Variables",
+        "description": "$tls_peer_revoked\n\n\nReturns 1 if the peer's certificate was revoked. Otherwise it returns 0. String and Integer type.\n\n"
+    },
+    {
+        "text": "$tls_peer_expired",
+        "type": "variable",
+        "displayText": "$tls_peer_expired",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "TLS module Pseudo-Variables",
+        "description": "$tls_peer_expired\n\n\nReturns 1 if the peer's certificate is expired. Otherwise it returns 0. String and Integer type.\n\n"
+    },
+    {
+        "text": "$tls_peer_selfsigned",
+        "type": "variable",
+        "displayText": "$tls_peer_selfsigned",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "TLS module Pseudo-Variables",
+        "description": "$tls_peer_selfsigned\n\n\nReturns 1 if the peer's certificate is selfsigned. Otherwise it returns 0. String and Integer type.\n\n"
+    },
+    {
+        "text": "$tls_peer_notBefore",
+        "type": "variable",
+        "displayText": "$tls_peer_notBefore",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "TLS module Pseudo-Variables",
+        "description": "$tls_peer_notBefore\n\n\nReturns the notBefore validity date of the peer's certificate. String type.\n\n"
+    },
+    {
+        "text": "$tls_peer_notAfter",
+        "type": "variable",
+        "displayText": "$tls_peer_notAfter",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "TLS module Pseudo-Variables",
+        "description": "$tls_peer_notAfter\n\n\nReturns the notAfter validity date of the peer's certificate. String type.\n\n"
+    },
+    {
+        "text": "$tls_peer_server_name",
+        "type": "variable",
+        "displayText": "$tls_peer_server_name",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "TLS module Pseudo-Variables",
+        "description": "$tls_peer_server_name\n\n\nThe SNI server name of the peer\n\n"
+    },
+    {
+        "text": "$msg(attr)",
+        "type": "variable",
+        "displayText": "$msg(attr)",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "SIP Message Attributes",
+        "description": "$msg(attr)\n\n\nReturn attributes of SIP message:\n\n\n $msg(len) - sip message length\n\n $msg(buf) - sip message buffer\n\n $msg(body) - sip message body\n\n $msg(body_len) - sip message body length\n\n $msg(hdrs) - sip message headers\n\n $msg(fline) - sip message first line\n\n\n",
+        "snippet": "$msg(${1:attr})"
+    },
+    {
+        "text": "$hu",
+        "type": "variable",
+        "displayText": "$hu",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "XHTTP module Pseudo-Variables",
+        "description": "$hu\n\n\n URL of http request.\n\n\n"
+    },
+    {
+        "text": "$msrp(buf)",
+        "type": "variable",
+        "displayText": "$msrp(buf)",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "MSRP Module Pseudo Variables",
+        "description": "$msrp(buf)\n\n\nThe entire content of MSRP frame - first line, headers, body and end-line.\n\n",
+        "snippet": "$msrp(${1:buf})"
+    },
+    {
+        "text": "$msrp(body)",
+        "type": "variable",
+        "displayText": "$msrp(body)",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "MSRP Module Pseudo Variables",
+        "description": "$msrp(body)\n\n\nThe body of MSRP frame.\n\n",
+        "snippet": "$msrp(${1:body})"
+    },
+    {
+        "text": "$msrp(code)",
+        "type": "variable",
+        "displayText": "$msrp(code)",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "MSRP Module Pseudo Variables",
+        "description": "$msrp(code)\n\n\nThe code of MSRP replies.\n\n",
+        "snippet": "$msrp(${1:code})"
+    },
+    {
+        "text": "$msrp(hdrs)",
+        "type": "variable",
+        "displayText": "$msrp(hdrs)",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "MSRP Module Pseudo Variables",
+        "description": "$msrp(hdrs)\n\n\nThe headers in a MSRP frame.\n\n",
+        "snippet": "$msrp(${1:hdrs})"
+    },
+    {
+        "text": "$msrp(msgid)",
+        "type": "variable",
+        "displayText": "$msrp(msgid)",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "MSRP Module Pseudo Variables",
+        "description": "$msrp(msgid)\n\n\nThe body of Message-Id header.\n\n",
+        "snippet": "$msrp(${1:msgid})"
+    },
+    {
+        "text": "$msrp(method)",
+        "type": "variable",
+        "displayText": "$msrp(method)",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "MSRP Module Pseudo Variables",
+        "description": "$msrp(method)\n\n\nThe method of a MSRP request.\n\n",
+        "snippet": "$msrp(${1:method})"
+    },
+    {
+        "text": "$msrp(buflen)",
+        "type": "variable",
+        "displayText": "$msrp(buflen)",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "MSRP Module Pseudo Variables",
+        "description": "$msrp(buflen)\n\n\nThe length of entire MSRP frame.\n\n",
+        "snippet": "$msrp(${1:buflen})"
+    },
+    {
+        "text": "$msrp(sessid)",
+        "type": "variable",
+        "displayText": "$msrp(sessid)",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "MSRP Module Pseudo Variables",
+        "description": "$msrp(sessid)\n\n\nThe session id for MSRP frame. It is taken from the first MSRP URI in To-Path header.\n\n",
+        "snippet": "$msrp(${1:sessid})"
+    },
+    {
+        "text": "$msrp(reason)",
+        "type": "variable",
+        "displayText": "$msrp(reason)",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "MSRP Module Pseudo Variables",
+        "description": "$msrp(reason)\n\n\nThe reason text in a MSRP reply.\n\n",
+        "snippet": "$msrp(${1:reason})"
+    },
+    {
+        "text": "$msrp(crthop)",
+        "type": "variable",
+        "displayText": "$msrp(crthop)",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "MSRP Module Pseudo Variables",
+        "description": "$msrp(crthop)\n\n\nThe URI for current hop - it is the first URI in To-Path header.\n\n",
+        "snippet": "$msrp(${1:crthop})"
+    },
+    {
+        "text": "$msrp(bodylen)",
+        "type": "variable",
+        "displayText": "$msrp(bodylen)",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "MSRP Module Pseudo Variables",
+        "description": "$msrp(bodylen)\n\n\nThe length of the body in MSRP frame.\n\n",
+        "snippet": "$msrp(${1:bodylen})"
+    },
+    {
+        "text": "$msrp(transid)",
+        "type": "variable",
+        "displayText": "$msrp(transid)",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "MSRP Module Pseudo Variables",
+        "description": "$msrp(transid)\n\n\nThe transaction ID from the first line of MSRP frame.\n\n",
+        "snippet": "$msrp(${1:transid})"
+    },
+    {
+        "text": "$msrp(prevhop)",
+        "type": "variable",
+        "displayText": "$msrp(prevhop)",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "MSRP Module Pseudo Variables",
+        "description": "$msrp(prevhop)\n\n\nThe MSRP URI of the previous hop - the first address in From-Path header.\n\n",
+        "snippet": "$msrp(${1:prevhop})"
+    },
+    {
+        "text": "$msrp(nexthop)",
+        "type": "variable",
+        "displayText": "$msrp(nexthop)",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "MSRP Module Pseudo Variables",
+        "description": "$msrp(nexthop)\n\n\nThe URI of the next hop - the second address in To-Path header.\n\n",
+        "snippet": "$msrp(${1:nexthop})"
+    },
+    {
+        "text": "$msrp(lasthop)",
+        "type": "variable",
+        "displayText": "$msrp(lasthop)",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "MSRP Module Pseudo Variables",
+        "description": "$msrp(lasthop)\n\n\nThe last hop URI - the last address in To-Path header.\n\n",
+        "snippet": "$msrp(${1:lasthop})"
+    },
+    {
+        "text": "$msrp(srcaddr)",
+        "type": "variable",
+        "displayText": "$msrp(srcaddr)",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "MSRP Module Pseudo Variables",
+        "description": "$msrp(srcaddr)\n\n\nThe address of the previous hop set as MSRP URI using received source IP and port.\n\n",
+        "snippet": "$msrp(${1:srcaddr})"
+    },
+    {
+        "text": "$msrp(srcsock)",
+        "type": "variable",
+        "displayText": "$msrp(srcsock)",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "MSRP Module Pseudo Variables",
+        "description": "$msrp(srcsock)\n\n\nThe local socket where the MSRP frame was received, set as **proto:ipaddr:port\u201c.\n\n",
+        "snippet": "$msrp(${1:srcsock})"
+    },
+    {
+        "text": "$msrp(firsthop)",
+        "type": "variable",
+        "displayText": "$msrp(firsthop)",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "MSRP Module Pseudo Variables",
+        "description": "$msrp(firsthop)\n\n\nThe URI of the first hop - the last address in From-Path header.\n\n",
+        "snippet": "$msrp(${1:firsthop})"
+    },
+    {
+        "text": "$msrp(prevhops)",
+        "type": "variable",
+        "displayText": "$msrp(prevhops)",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "MSRP Module Pseudo Variables",
+        "description": "$msrp(prevhops)\n\n\nThe number of previous hops - it is the number of addresses in From-Path header.\n\n",
+        "snippet": "$msrp(${1:prevhops})"
+    },
+    {
+        "text": "$msrp(nexthops)",
+        "type": "variable",
+        "displayText": "$msrp(nexthops)",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "MSRP Module Pseudo Variables",
+        "description": "$msrp(nexthops)\n\n\nThe number of next hops - it is the number of addresses in To-Path header minus 1 (the first address in To-Path is current hop).\n\n",
+        "snippet": "$msrp(${1:nexthops})"
+    },
+    {
+        "text": "$msrp(conid)",
+        "type": "variable",
+        "displayText": "$msrp(conid)",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "MSRP Module Pseudo Variables",
+        "description": "$msrp(conid)\n\n\nThe internal integer id for TCP/TLS connection.\n\n",
+        "snippet": "$msrp(${1:conid})"
+    },
+    {
+        "text": "$sipt(calling_party_number.presentation) / $sipt_presentation",
+        "type": "variable",
+        "displayText": "$sipt(calling_party_number.presentation) / $sipt_presentation",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "SIPT module Pseudo-Variables",
+        "description": "$sipt(calling_party_number.presentation) / $sipt_presentation\n\n\nReturns the value of the Address presentation restricted indicator contained in the Calling Party Number header of the IAM message if it exists. Returns -1 if there isn't a Calling Party Number header.\n\n\nThe following values can be returned:\n\n\n 0 presentation allowed\n\n 1 resentation restricted\n\n 2 address not avail (national use)\n\n 3 spare\n\n\n\nExample:\n\nif($sipt(calling_party_number.presentation) == 1)\n{\n        append_hf(Privacy: id\\r\\n);\n        $fn = Anonymous;\n}\n"
+    },
+    {
+        "text": "$sipt(calling_party_number.screening) / $sipt_screening",
+        "type": "variable",
+        "displayText": "$sipt(calling_party_number.screening) / $sipt_screening",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "SIPT module Pseudo-Variables",
+        "description": "$sipt(calling_party_number.screening) / $sipt_screening\n\n\nReturns the value of the Screening Indicator contained in the Calling Party Number header of the IAM message if it exists. Returns -1 if there isn't a Calling Party Number header.\n\n\nCan return the following values:\n\n\n 0 Reserved (user provided, not verified)\n\n 1 User Provided, Verified and Passed\n\n 2 Reserved (user provided, verified and failed)\n\n 3 Network provided\n\n\n\nExample:\n\n# remove P-Asserted-Identity header if the screening isn't verified\n# or network provided\n$avp(s:screening) = $sipt(calling_party_number.screening);\nif($avp(s:screening) != 1  $avp(s:screening) != 3)\n{\n        remove_hf(P-Asserted-Id);\n}\n"
+    },
+    {
+        "text": "$sipt(hop_counter) / $sipt_hop_counter",
+        "type": "variable",
+        "displayText": "$sipt(hop_counter) / $sipt_hop_counter",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "SIPT module Pseudo-Variables",
+        "description": "$sipt(hop_counter) / $sipt_hop_counter\n\n\nReturns the value of the Hop Counter for the IAM message if it exists. Returns -1 if there isn't a hop counter.\n\n\nExample:\n\n# get the hop counter and update the Max-Forwards header if it exists\n$avp(s:hop) = $sipt(hop_counter);\nif($avp(s:hop)  0)\n{\n        remove_hf(Max-Forwards);\n        append_hf(Max-Forwards: $avp(s:hop)\\r\\n);\n}\n",
+        "snippet": "$sipt(${1:hop_counter}) / $sipt_hop_counter"
+    },
+    {
+        "text": "$sipt(calling_party_category) / $sipt(cpc) / $sipt_cpc",
+        "type": "variable",
+        "displayText": "$sipt(calling_party_category) / $sipt(cpc) / $sipt_cpc",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "SIPT module Pseudo-Variables",
+        "description": "$sipt(calling_party_category) / $sipt(cpc) / $sipt_cpc\n\n\nReturns the value of the Calling Party Category for the IAM message. Returns -1 if there is a parsing error.\n\n",
+        "snippet": "$sipt(${1:calling_party_category}) / $sipt(${1:cpc}) / $sipt_cpc"
+    },
+    {
+        "text": "$sipt(calling_party_number.nature_of_address) / $sipt.(calling_party_number.nai) / $sipt_calling_party_nai",
+        "type": "variable",
+        "displayText": "$sipt(calling_party_number.nature_of_address) / $sipt.(calling_party_number.nai) / $sipt_calling_party_nai",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "SIPT module Pseudo-Variables",
+        "description": "$sipt(calling_party_number.nature_of_address) / $sipt.(calling_party_number.nai) / $sipt_calling_party_nai\n\n\nReturns the value of the Nature of Address Indicator of the Calling Party for the IAM message. Returns -1 if there is a parsing error or if the Calling Party Number is not present.\n\n\nCan return the following values:\n\n\n 0 Spare\n\n 1 Subscriber Number (national use)\n\n 2 Unknown (national use)\n\n 3 National (significant) number (national use)\n\n 4 International use\n\n\n\nExample:\n\n# get the Calling Nai and add country code if national\nif($sipt(calling_party_number.nai) == 3)\n{\n        $fU = 32 + $fU;\n}\n"
+    },
+    {
+        "text": "$sipt(called_party_number.nature_of_address) / $sipt(called_party_number.nai) / $sipt_called_party_nai",
+        "type": "variable",
+        "displayText": "$sipt(called_party_number.nature_of_address) / $sipt(called_party_number.nai) / $sipt_called_party_nai",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "SIPT module Pseudo-Variables",
+        "description": "$sipt(called_party_number.nature_of_address) / $sipt(called_party_number.nai) / $sipt_called_party_nai\n\n\nReturns the value of the Nature of Address Indicator of the Called Party for the IAM message. Returns -1 if there is a parsing error.\n\n\nCan return the following values:\n\n\n 0 Spare\n\n 1 Subscriber Number (national use)\n\n 2 Unknown (national use)\n\n 3 National (significant) number\n\n 4 International use\n\n 5 Network-specific number (national use)\n\n\n\nExample:\n\n# get the Called Nai and add country code if national\nif($sipt(called_party_number.nai) == 3)\n{\n        $rU = 32 + $rU;\n}\n"
+    },
+    {
+        "text": "$sipt(event_info)",
+        "type": "variable",
+        "displayText": "$sipt(event_info)",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "SIPT module Pseudo-Variables",
+        "description": "$sipt(event_info)\n\n\nReturns the value  of the Event Info header of the CPG message. Returns -1 if there is a parsing error.\n\n\nCan return the following values:\n\n\n 0 Spare\n\n 1 ALERTING\n\n 2 PROGRESS\n\n 3 In-band information or an appropriate pattern is now available\n\n 4 Call forward on busy\n\n 5 Call forward on no reply\n\n 6 Call forward unconditional\n\n\n",
+        "snippet": "$sipt(${1:event_info})"
+    },
+    {
+        "text": "$sipt(backward_call_indicator.charge_indicator)",
+        "type": "variable",
+        "displayText": "$sipt(backward_call_indicator.charge_indicator)",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "SIPT module Pseudo-Variables",
+        "description": "$sipt(backward_call_indicator.charge_indicator)\n\n\nReturns the value of the charge indication of the backward call\nindicator header in the ACM or COT message. Returns -1 if there is a\nparsing error\n\n\nCan return the following values:\n\n\n 0 no indication\n\n 1 no charge\n\n 2 charge\n\n 3 spare\n\n\n"
+    },
+    {
+        "text": "$jsonrpl(key) ",
+        "type": "variable",
+        "displayText": "$jsonrpl(key) ",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "JSONRPCS Variables",
+        "description": " JSONRPC Reply\n\n\nThis variable gives access to JSONRPC reply after executing jsonrpc_exec(\u2026) in kamailio.cfg.\n\n\nThe key can be:\n\n\n code - code for the JSONRPC response\n\n text - text of the code for the JSONRPC response\n\n body - the body of the JSONRPC response\n\n\n",
+        "snippet": "$jsonrpl(${1:key}) "
+    },
+    {
+        "text": "$subs(key) ",
+        "type": "variable",
+        "displayText": "$subs(key) ",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "Presence Module Pseudo-Variables",
+        "description": " Subscription Attributes\n\n\nThis variable gives access to attributes of the current subscription. The variable has to be used after executing handle_subscription() in order to provide accurate values.\n\n\nThe key can be:\n\n\n uri - subscription URI. Useful in particular for subscriptions within the dialog, when the request URI in SUBSCRIBE is the Contact address from the initial subscription.\n\n\n",
+        "snippet": "$subs(${1:key}) "
+    },
+    {
+        "text": "$ulc(profile=attr) ",
+        "type": "variable",
+        "displayText": "$ulc(profile=attr) ",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "Registrar Module Pseudo-Variables",
+        "description": " Registered Contact Attributes\n\n\nAccess the attributes of contact addresses stored in 'profile'.\n\n\nIt must be used after a call of \u201creg_fetch_contacts()\u201d.\n\n"
+    },
+    {
+        "text": "$hep(key) ",
+        "type": "variable",
+        "displayText": "$hep(key) ",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "sipcapture Module Pseudo-Variables",
+        "description": " HEP Packet Attributes\n\n\nThe key refers to HEP packet header values:\n\n\n version - HEP version\n\n src_ip - source IP address\n\n dst_ip - destination IP address\n\n 0x000 - HEP attribute 0x000\n\n 0x999 - HEP attribute 0x999\n\n\n",
+        "snippet": "$hep(${1:key}) "
+    }
+]
