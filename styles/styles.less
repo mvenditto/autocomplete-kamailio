@@ -3,9 +3,57 @@
 // See https://github.com/atom/atom-dark-ui/blob/master/styles/ui-variables.less
 // for a full listing of what's available.
 @import "ui-variables";
+@import "fontawesome/fontawesome";
+@import "fontawesome/fa-solid";
 
-// advanced provider uses this class
-// this is just simple italicizing, but, you know, use your imagination
 .aab-right-label {
 	font-style: italic;
+}
+
+
+
+.select-icon {
+	.fa-icon;
+  .fas;
+
+  &:before {
+    content: @fa-var-glasses;
+  }
+}
+
+.transformation-icon {
+	.fa-icon;
+  .fas;
+
+  &:before {
+    content: @fa-var-sync;
+  }
+}
+
+.pseudovar-icon {
+	.fa-icon;
+  .fas;
+
+  &:before {
+    content: @fa-var-dollar-sign;
+  }
+}
+
+
+@color: #61AEEF;
+autocomplete-suggestion-list .icon.transformation {
+  color: @color;
+  background: fadeout(@color, 80%)
+}
+
+@color-sel: #61AEEF;
+autocomplete-suggestion-list .icon.select {
+  color: @color-sel;
+  background: fadeout(@color-sel, 80%)
+}
+
+@color-pv: #DF6A73;
+autocomplete-suggestion-list .icon.pseudovariable {
+  color: @color-pv;
+  background: fadeout(@color-pv, 80%)
 }

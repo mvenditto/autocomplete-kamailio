@@ -1,5 +1,29 @@
 [
     {
+        "displayText": "$var(name)",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "Var",
+        "snippet": "$var(${1:name})",
+        "type": "variable",
+        "description": "Refers to variables that can be used in configuration script, having integer or string value.\nThis kind of variables are faster than AVPs, being referenced directly to memory location."
+    },
+    {
+        "displayText": "$avp(id)",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "AVP(id)",
+        "snippet": "$avp(${1:id})",
+        "type": "variable",
+        "description": "The value of the AVP identified by 'id'."
+    },
+    {
+        "displayText": "$avp(id)[idx]",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
+        "rightLabel": "nth AVP(id)",
+        "snippet": "$(avp(${1:id})[${2:N}])",
+        "type": "variable",
+        "description": "Represents the value of N-th AVP identified by 'id'. "
+    },
+    {
         "displayText": "$$",
         "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/pseudovariables",
         "rightLabel": " Pseudo",

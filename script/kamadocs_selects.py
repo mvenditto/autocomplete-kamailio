@@ -5,35 +5,18 @@ from collections import OrderedDict
 import re
 
 def get_type(category):
-    try:
-        c = category.split()
-        t = c[1].lower()
-        if t == "keywords":
-            return "keyword"
-        elif t == "values":
-            return "value"
-        elif t == "parameters":
-            return "variable"
-        elif t == "functions":
-            return "function"
-        elif t == "pre-processor":
-            return "import"
-        else:
-            return "value"
-    except Exception as ex:
-        print(ex)
-        return "value"
+    return "function"
         
 
 def idx_from_class(x):
     return int(x.attrs["class"].split("sectionedit")[1])
 
-url = "https://www.kamailio.org/wiki/cookbooks/5.1.x/core"
+url = "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects"
 
 html = urlopen(url).read().decode('utf-8')
 soup = bs(html, "lxml-xml")
 
-keywords_start_from = 10 # jump to 'preprocess-directives'
+keywords_start_from = 0 # jump to 'preprocess-directives'
 
 h2 = soup.find_all("h2", class_ = lambda cls: cls.startswith("sectionedit"))
 categories_ = list(map(lambda x: (x.text, idx_from_class(x)), h2))
@@ -56,7 +39,7 @@ def get_category(idx):
             continue
         else:
             return categories[latest]
-    return ""
+    return None
 
 
 for keyword_entry in zip(keywords[keywords_start_from:], descriptions[keywords_start_from:]):
@@ -64,6 +47,11 @@ for keyword_entry in zip(keywords[keywords_start_from:], descriptions[keywords_s
     desc = keyword_entry[1].text
     category = get_category(idx_from_class(keyword_entry[0]))
     type_ = get_type(category)
+
+    if category is None:
+        c = re.findall(r"Exported by: (\w+)", desc)
+        if len(c) > 0:
+            category = c[0]
 
     entry = {
         "text": keyword,
@@ -73,28 +61,19 @@ for keyword_entry in zip(keywords[keywords_start_from:], descriptions[keywords_s
         "rightLabel": category
     }
 
+    params = [m.start() for m in re.finditer("\%[s,i]", keyword)]
+   
+    if len(params) > 0:
+        snip = keyword
+        for p,i in zip(params, range(0, len(params))):
+            t = keyword[p+1]
+            snip = snip.replace("%"+t, "${%d: %s%d}" % (i + 1, t, i + 1))
+        entry["snippet"] = entry["text"] = snip
+
     
-
-    if type_ == "function":
-        entry["text"] = "%s()" % entry["text"]
-
-
-    args = re.findall(r"\w*" + keyword + "\((.+)\)\w*", desc)
-    if len(args) > 1:
-        r = args[0].split(",")
-        n_args = len(r)
-        print(keyword, n_args, args)
-        if n_args > 1:
-            sign = ",".join(["${%d: arg%d}" % (i+1,i+1) for i in range(0, len(r))])
-            entry["snippet"] = "%s(%s)" % (keyword, sign)
-        elif n_args == 1:
-            entry["snippet"] = "%s(${1: arg1})" % keyword
-            
-
     to_json.append(entry)
     
 
-out = "/home/mvenditto/Scaricati/kamailio_5_1_x_core.json"
+out = "/home/mvenditto/Scaricati/kamailio_5_1_x_selects.json"
 with open(out, "w+") as json_out:
     json_out.write(json.dumps(to_json, indent=4))
-

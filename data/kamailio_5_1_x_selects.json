@@ -1,0 +1,5315 @@
+[
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "Select Classes",
+        "type": "function",
+        "description": "\n\nSelect handling Contact headers.\n\n",
+        "text": "contact"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "Select Classes",
+        "type": "function",
+        "description": "\n\nSelect handling From header\n\n",
+        "text": "from"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "Select Classes",
+        "type": "function",
+        "description": "\n\nSelect handling SIP message.\n\n",
+        "text": "msg"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "Select Classes",
+        "type": "function",
+        "description": "\n\nSelect handling R-URI.\n\n\nSyntax:\n\n@ruri\n\nReturn the value of request URI (R-URI).\n\n",
+        "text": "ruri"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "Select Classes",
+        "type": "function",
+        "description": "\n\nSelect handling TLS environment.\n\n",
+        "text": "tls"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "Select Classes",
+        "type": "function",
+        "description": "\n\nSelect handling To header.\n\n",
+        "text": "to"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "Select Classes",
+        "type": "function",
+        "description": "\n\nSelect handling Via header.\n\n\nSyntax:\n\n@via\n@via[index]\n@via[index].param\n...\n\nReturn entire or parts of Via header.\n\n\nExample:\n\n\n return the IP of top most Via header\n\n\n@via[1].host\n",
+        "text": "via"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "Select Classes",
+        "type": "function",
+        "description": "\n\nSelect handling XMLRPC requests via XMLRPC module.\n\n",
+        "text": "xmlrpc"
+    },
+    {
+        "type": "function",
+        "snippet": "@authorization[${1: s1}]",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "text": "@authorization[${1: s1}]",
+        "rightLabel": "core",
+        "description": "\n\nExported by: core\n\n"
+    },
+    {
+        "type": "function",
+        "snippet": "@authorization[${1: s1}].algorithm",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "text": "@authorization[${1: s1}].algorithm",
+        "rightLabel": "core",
+        "description": "\n\nExported by: core\n\n"
+    },
+    {
+        "type": "function",
+        "snippet": "@authorization[${1: s1}].cnonce",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "text": "@authorization[${1: s1}].cnonce",
+        "rightLabel": "core",
+        "description": "\n\nExported by: core\n\n"
+    },
+    {
+        "type": "function",
+        "snippet": "@authorization[${1: s1}].nc",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "text": "@authorization[${1: s1}].nc",
+        "rightLabel": "core",
+        "description": "\n\nExported by: core\n\n"
+    },
+    {
+        "type": "function",
+        "snippet": "@authorization[${1: s1}].nonce",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "text": "@authorization[${1: s1}].nonce",
+        "rightLabel": "core",
+        "description": "\n\nExported by: core\n\n"
+    },
+    {
+        "type": "function",
+        "snippet": "@authorization[${1: s1}].opaque",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "text": "@authorization[${1: s1}].opaque",
+        "rightLabel": "core",
+        "description": "\n\nExported by: core\n\n"
+    },
+    {
+        "type": "function",
+        "snippet": "@authorization[${1: s1}].qop",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "text": "@authorization[${1: s1}].qop",
+        "rightLabel": "core",
+        "description": "\n\nExported by: core\n\n"
+    },
+    {
+        "type": "function",
+        "snippet": "@authorization[${1: s1}].realm",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "text": "@authorization[${1: s1}].realm",
+        "rightLabel": "core",
+        "description": "\n\nExported by: core\n\n"
+    },
+    {
+        "type": "function",
+        "snippet": "@authorization[${1: s1}].response",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "text": "@authorization[${1: s1}].response",
+        "rightLabel": "core",
+        "description": "\n\nExported by: core\n\n"
+    },
+    {
+        "type": "function",
+        "snippet": "@authorization[${1: s1}].uri",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "text": "@authorization[${1: s1}].uri",
+        "rightLabel": "core",
+        "description": "\n\nExported by: core\n\n"
+    },
+    {
+        "type": "function",
+        "snippet": "@authorization[${1: s1}].username",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "text": "@authorization[${1: s1}].username",
+        "rightLabel": "core",
+        "description": "\n\nExported by: core\n\n"
+    },
+    {
+        "type": "function",
+        "snippet": "@authorization[${1: s1}].username.domain",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "text": "@authorization[${1: s1}].username.domain",
+        "rightLabel": "core",
+        "description": "\n\nExported by: core\n\n"
+    },
+    {
+        "type": "function",
+        "snippet": "@authorization[${1: s1}].username.user",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "text": "@authorization[${1: s1}].username.user",
+        "rightLabel": "core",
+        "description": "\n\nExported by: core\n\n"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "core",
+        "type": "function",
+        "description": "\n\nExported by: core\n\n",
+        "text": "@contact"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "core",
+        "type": "function",
+        "description": "\n\nExported by: core\n\n",
+        "text": "@contact.expires"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "core",
+        "type": "function",
+        "description": "\n\nExported by: core\n\n",
+        "text": "@contact.instance"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "core",
+        "type": "function",
+        "description": "\n\nExported by: core\n\n",
+        "text": "@contact.method"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "core",
+        "type": "function",
+        "description": "\n\nExported by: core\n\n",
+        "text": "@contact.name"
+    },
+    {
+        "type": "function",
+        "snippet": "@contact.params[${1: s1}]",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "text": "@contact.params[${1: s1}]",
+        "rightLabel": "core",
+        "description": "\n\nExported by: core\n\n"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "core",
+        "type": "function",
+        "description": "\n\nExported by: core\n\n",
+        "text": "@contact.q"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "core",
+        "type": "function",
+        "description": "\n\nExported by: core\n\n",
+        "text": "@contact.received"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "core",
+        "type": "function",
+        "description": "\n\nExported by: core\n\n",
+        "text": "@contact.uri"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "core",
+        "type": "function",
+        "description": "\n\nExported by: core\n\n",
+        "text": "@contact.uri.host"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "core",
+        "type": "function",
+        "description": "\n\nExported by: core\n\n",
+        "text": "@contact.uri.hostport"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "core",
+        "type": "function",
+        "description": "\n\nExported by: core\n\n",
+        "text": "@contact.uri.params"
+    },
+    {
+        "type": "function",
+        "snippet": "@contact.uri.params[${1: s1}]",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "text": "@contact.uri.params[${1: s1}]",
+        "rightLabel": "core",
+        "description": "\n\nExported by: core\n\n"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "core",
+        "type": "function",
+        "description": "\n\nExported by: core\n\n",
+        "text": "@contact.uri.port"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "core",
+        "type": "function",
+        "description": "\n\nExported by: core\n\n",
+        "text": "@contact.uri.pwd"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "core",
+        "type": "function",
+        "description": "\n\nExported by: core\n\n",
+        "text": "@contact.uri.type"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "core",
+        "type": "function",
+        "description": "\n\nExported by: core\n\n",
+        "text": "@contact.uri.user"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "core",
+        "type": "function",
+        "description": "\n\nExported by: core\n\n",
+        "text": "@cseq"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "core",
+        "type": "function",
+        "description": "\n\nExported by: core\n\n",
+        "text": "@cseq.method"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "core",
+        "type": "function",
+        "description": "\n\nExported by: core\n\n",
+        "text": "@cseq.num"
+    },
+    {
+        "type": "function",
+        "snippet": "@db.fetch[${1: i1}]",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "text": "@db.fetch[${1: i1}]",
+        "rightLabel": "db_ops",
+        "description": "\n\nExported by: db_ops\n\n"
+    },
+    {
+        "type": "function",
+        "snippet": "@db.fetch[${1: i1}].count",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "text": "@db.fetch[${1: i1}].count",
+        "rightLabel": "db_ops",
+        "description": "\n\nExported by: db_ops\n\n"
+    },
+    {
+        "type": "function",
+        "snippet": "@db.fetch[${1: i1}].field[${1: i1}]",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "text": "@db.fetch[${1: i1}].field[${1: i1}]",
+        "rightLabel": "db_ops",
+        "description": "\n\nExported by: db_ops\n\n"
+    },
+    {
+        "type": "function",
+        "snippet": "@db.fetch[${1: i1}].field[${1: i1}].nameaddr",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "text": "@db.fetch[${1: i1}].field[${1: i1}].nameaddr",
+        "rightLabel": "db_ops",
+        "description": "\n\nExported by: db_ops\n\n"
+    },
+    {
+        "type": "function",
+        "snippet": "@db.fetch[${1: i1}].field[${1: i1}].uri",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "text": "@db.fetch[${1: i1}].field[${1: i1}].uri",
+        "rightLabel": "db_ops",
+        "description": "\n\nExported by: db_ops\n\n"
+    },
+    {
+        "type": "function",
+        "snippet": "@db.fetch[${1: i1}].nameaddr",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "text": "@db.fetch[${1: i1}].nameaddr",
+        "rightLabel": "db_ops",
+        "description": "\n\nExported by: db_ops\n\n"
+    },
+    {
+        "type": "function",
+        "snippet": "@db.fetch[${1: i1}].row[${1: i1}]",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "text": "@db.fetch[${1: i1}].row[${1: i1}]",
+        "rightLabel": "db_ops",
+        "description": "\n\nExported by: db_ops\n\n"
+    },
+    {
+        "type": "function",
+        "snippet": "@db.fetch[${1: i1}].row[${1: i1}].field[${1: i1}]",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "text": "@db.fetch[${1: i1}].row[${1: i1}].field[${1: i1}]",
+        "rightLabel": "db_ops",
+        "description": "\n\nExported by: db_ops\n\n"
+    },
+    {
+        "type": "function",
+        "snippet": "@db.fetch[${1: i1}].row[${1: i1}].field[${1: i1}].nameaddr",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "text": "@db.fetch[${1: i1}].row[${1: i1}].field[${1: i1}].nameaddr",
+        "rightLabel": "db_ops",
+        "description": "\n\nExported by: db_ops\n\n"
+    },
+    {
+        "type": "function",
+        "snippet": "@db.fetch[${1: i1}].row[${1: i1}].field[${1: i1}].uri",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "text": "@db.fetch[${1: i1}].row[${1: i1}].field[${1: i1}].uri",
+        "rightLabel": "db_ops",
+        "description": "\n\nExported by: db_ops\n\n"
+    },
+    {
+        "type": "function",
+        "snippet": "@db.fetch[${1: i1}].row_no",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "text": "@db.fetch[${1: i1}].row_no",
+        "rightLabel": "db_ops",
+        "description": "\n\nExported by: db_ops\n\n"
+    },
+    {
+        "type": "function",
+        "snippet": "@db.fetch[${1: i1}].uri",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "text": "@db.fetch[${1: i1}].uri",
+        "rightLabel": "db_ops",
+        "description": "\n\nExported by: db_ops\n\n"
+    },
+    {
+        "type": "function",
+        "snippet": "@db.query[${1: i1}]",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "text": "@db.query[${1: i1}]",
+        "rightLabel": "db_ops",
+        "description": "\n\nExported by: db_ops\n\n"
+    },
+    {
+        "type": "function",
+        "snippet": "@db.query[${1: i1}].count",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "text": "@db.query[${1: i1}].count",
+        "rightLabel": "db_ops",
+        "description": "\n\nExported by: db_ops\n\n"
+    },
+    {
+        "type": "function",
+        "snippet": "@db.query[${1: i1}].field[${1: i1}]",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "text": "@db.query[${1: i1}].field[${1: i1}]",
+        "rightLabel": "db_ops",
+        "description": "\n\nExported by: db_ops\n\n"
+    },
+    {
+        "type": "function",
+        "snippet": "@db.query[${1: i1}].field[${1: i1}].nameaddr",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "text": "@db.query[${1: i1}].field[${1: i1}].nameaddr",
+        "rightLabel": "db_ops",
+        "description": "\n\nExported by: db_ops\n\n"
+    },
+    {
+        "type": "function",
+        "snippet": "@db.query[${1: i1}].field[${1: i1}].uri",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "text": "@db.query[${1: i1}].field[${1: i1}].uri",
+        "rightLabel": "db_ops",
+        "description": "\n\nExported by: db_ops\n\n"
+    },
+    {
+        "type": "function",
+        "snippet": "@db.query[${1: i1}].nameaddr",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "text": "@db.query[${1: i1}].nameaddr",
+        "rightLabel": "db_ops",
+        "description": "\n\nExported by: db_ops\n\n"
+    },
+    {
+        "type": "function",
+        "snippet": "@db.query[${1: i1}].row[${1: i1}]",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "text": "@db.query[${1: i1}].row[${1: i1}]",
+        "rightLabel": "db_ops",
+        "description": "\n\nExported by: db_ops\n\n"
+    },
+    {
+        "type": "function",
+        "snippet": "@db.query[${1: i1}].row[${1: i1}].field[${1: i1}]",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "text": "@db.query[${1: i1}].row[${1: i1}].field[${1: i1}]",
+        "rightLabel": "db_ops",
+        "description": "\n\nExported by: db_ops\n\n"
+    },
+    {
+        "type": "function",
+        "snippet": "@db.query[${1: i1}].row[${1: i1}].field[${1: i1}].nameaddr",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "text": "@db.query[${1: i1}].row[${1: i1}].field[${1: i1}].nameaddr",
+        "rightLabel": "db_ops",
+        "description": "\n\nExported by: db_ops\n\n"
+    },
+    {
+        "type": "function",
+        "snippet": "@db.query[${1: i1}].row[${1: i1}].field[${1: i1}].uri",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "text": "@db.query[${1: i1}].row[${1: i1}].field[${1: i1}].uri",
+        "rightLabel": "db_ops",
+        "description": "\n\nExported by: db_ops\n\n"
+    },
+    {
+        "type": "function",
+        "snippet": "@db.query[${1: i1}].uri",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "text": "@db.query[${1: i1}].uri",
+        "rightLabel": "db_ops",
+        "description": "\n\nExported by: db_ops\n\n"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "core",
+        "type": "function",
+        "description": "\n\nExported by: core\n\n",
+        "text": "@dst.ip"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "core",
+        "type": "function",
+        "description": "\n\nExported by: core\n\n",
+        "text": "@dst.ip_port"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "core",
+        "type": "function",
+        "description": "\n\nExported by: core\n\n",
+        "text": "@dst.port"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "core",
+        "type": "function",
+        "description": "\n\nExported by: core\n\n",
+        "text": "@dst_uri"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "core",
+        "type": "function",
+        "description": "\n\nExported by: core\n\n",
+        "text": "@dst_uri.host"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "core",
+        "type": "function",
+        "description": "\n\nExported by: core\n\n",
+        "text": "@dst_uri.hostport"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "core",
+        "type": "function",
+        "description": "\n\nExported by: core\n\n",
+        "text": "@dst_uri.params"
+    },
+    {
+        "type": "function",
+        "snippet": "@dst_uri.params[${1: s1}]",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "text": "@dst_uri.params[${1: s1}]",
+        "rightLabel": "core",
+        "description": "\n\nExported by: core\n\n"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "core",
+        "type": "function",
+        "description": "\n\nExported by: core\n\n",
+        "text": "@dst_uri.port"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "core",
+        "type": "function",
+        "description": "\n\nExported by: core\n\n",
+        "text": "@dst_uri.pwd"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "core",
+        "type": "function",
+        "description": "\n\nExported by: core\n\n",
+        "text": "@dst_uri.type"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "core",
+        "type": "function",
+        "description": "\n\nExported by: core\n\n",
+        "text": "@dst_uri.user"
+    },
+    {
+        "type": "function",
+        "snippet": "@eval.get[${1: i1}]",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "text": "@eval.get[${1: i1}]",
+        "rightLabel": "eval",
+        "description": "\n\nExported by: eval\n\n"
+    },
+    {
+        "type": "function",
+        "snippet": "@eval.get[${1: i1}].nameaddr",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "text": "@eval.get[${1: i1}].nameaddr",
+        "rightLabel": "eval",
+        "description": "\n\nExported by: eval\n\n"
+    },
+    {
+        "type": "function",
+        "snippet": "@eval.get[${1: i1}].uri",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "text": "@eval.get[${1: i1}].uri",
+        "rightLabel": "eval",
+        "description": "\n\nExported by: eval\n\n"
+    },
+    {
+        "type": "function",
+        "snippet": "@eval.pop[${1: i1}]",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "text": "@eval.pop[${1: i1}]",
+        "rightLabel": "eval",
+        "description": "\n\nExported by: eval\n\n"
+    },
+    {
+        "type": "function",
+        "snippet": "@eval.reg[${1: s1}]",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "text": "@eval.reg[${1: s1}]",
+        "rightLabel": "eval",
+        "description": "\n\nExported by: eval\n\n"
+    },
+    {
+        "type": "function",
+        "snippet": "@eval.reg[${1: s1}].nameaddr",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "text": "@eval.reg[${1: s1}].nameaddr",
+        "rightLabel": "eval",
+        "description": "\n\nExported by: eval\n\n"
+    },
+    {
+        "type": "function",
+        "snippet": "@eval.reg[${1: s1}].uri",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "text": "@eval.reg[${1: s1}].uri",
+        "rightLabel": "eval",
+        "description": "\n\nExported by: eval\n\n"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "eval",
+        "type": "function",
+        "description": "\n\nExported by: eval\n\n",
+        "text": "@eval.uuid"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "core",
+        "type": "function",
+        "description": "\n\nExported by: core\n\n",
+        "text": "@event"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "core",
+        "type": "function",
+        "description": "\n\nExported by: core\n\n",
+        "text": "@f"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "core",
+        "type": "function",
+        "description": "\n\nExported by: core\n\n",
+        "text": "@f.name"
+    },
+    {
+        "type": "function",
+        "snippet": "@f.params[${1: s1}]",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "text": "@f.params[${1: s1}]",
+        "rightLabel": "core",
+        "description": "\n\nExported by: core\n\n"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "core",
+        "type": "function",
+        "description": "\n\nExported by: core\n\n",
+        "text": "@f.tag"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "core",
+        "type": "function",
+        "description": "\n\nExported by: core\n\n",
+        "text": "@f.uri"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "core",
+        "type": "function",
+        "description": "\n\nExported by: core\n\n",
+        "text": "@f.uri.host"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "core",
+        "type": "function",
+        "description": "\n\nExported by: core\n\n",
+        "text": "@f.uri.hostport"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "core",
+        "type": "function",
+        "description": "\n\nExported by: core\n\n",
+        "text": "@f.uri.params"
+    },
+    {
+        "type": "function",
+        "snippet": "@f.uri.params[${1: s1}]",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "text": "@f.uri.params[${1: s1}]",
+        "rightLabel": "core",
+        "description": "\n\nExported by: core\n\n"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "core",
+        "type": "function",
+        "description": "\n\nExported by: core\n\n",
+        "text": "@f.uri.port"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "core",
+        "type": "function",
+        "description": "\n\nExported by: core\n\n",
+        "text": "@f.uri.pwd"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "core",
+        "type": "function",
+        "description": "\n\nExported by: core\n\n",
+        "text": "@f.uri.type"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "core",
+        "type": "function",
+        "description": "\n\nExported by: core\n\n",
+        "text": "@f.uri.user"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "core",
+        "type": "function",
+        "description": "\n\nExported by: core\n\n",
+        "text": "@from"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "core",
+        "type": "function",
+        "description": "\n\nExported by: core\n\n",
+        "text": "@from.name"
+    },
+    {
+        "type": "function",
+        "snippet": "@from.params[${1: s1}]",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "text": "@from.params[${1: s1}]",
+        "rightLabel": "core",
+        "description": "\n\nExported by: core\n\n"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "core",
+        "type": "function",
+        "description": "\n\nExported by: core\n\n",
+        "text": "@from.tag"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "core",
+        "type": "function",
+        "description": "\n\nExported by: core\n\n",
+        "text": "@from.uri"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "core",
+        "type": "function",
+        "description": "\n\nExported by: core\n\n",
+        "text": "@from.uri.host"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "core",
+        "type": "function",
+        "description": "\n\nExported by: core\n\n",
+        "text": "@from.uri.hostport"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "core",
+        "type": "function",
+        "description": "\n\nExported by: core\n\n",
+        "text": "@from.uri.params"
+    },
+    {
+        "type": "function",
+        "snippet": "@from.uri.params[${1: s1}]",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "text": "@from.uri.params[${1: s1}]",
+        "rightLabel": "core",
+        "description": "\n\nExported by: core\n\n"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "core",
+        "type": "function",
+        "description": "\n\nExported by: core\n\n",
+        "text": "@from.uri.port"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "core",
+        "type": "function",
+        "description": "\n\nExported by: core\n\n",
+        "text": "@from.uri.pwd"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "core",
+        "type": "function",
+        "description": "\n\nExported by: core\n\n",
+        "text": "@from.uri.type"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "core",
+        "type": "function",
+        "description": "\n\nExported by: core\n\n",
+        "text": "@from.uri.user"
+    },
+    {
+        "type": "function",
+        "snippet": "@hf_value.${1: s1}",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "text": "@hf_value.${1: s1}",
+        "rightLabel": "textops",
+        "description": "\n\nExported by: textops\n\n"
+    },
+    {
+        "type": "function",
+        "snippet": "@hf_value.${1: s1}.${1: s1}",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "text": "@hf_value.${1: s1}.${1: s1}",
+        "rightLabel": "textops",
+        "description": "\n\nExported by: textops\n\n"
+    },
+    {
+        "type": "function",
+        "snippet": "@hf_value.${1: s1}.name",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "text": "@hf_value.${1: s1}.name",
+        "rightLabel": "textops",
+        "description": "\n\nExported by: textops\n\n"
+    },
+    {
+        "type": "function",
+        "snippet": "@hf_value.${1: s1}.nameaddr",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "text": "@hf_value.${1: s1}.nameaddr",
+        "rightLabel": "textops",
+        "description": "\n\nExported by: textops\n\n"
+    },
+    {
+        "type": "function",
+        "snippet": "@hf_value.${1: s1}.p[${1: s1}]",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "text": "@hf_value.${1: s1}.p[${1: s1}]",
+        "rightLabel": "textops",
+        "description": "\n\nExported by: textops\n\n"
+    },
+    {
+        "type": "function",
+        "snippet": "@hf_value.${1: s1}.param[${1: s1}]",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "text": "@hf_value.${1: s1}.param[${1: s1}]",
+        "rightLabel": "textops",
+        "description": "\n\nExported by: textops\n\n"
+    },
+    {
+        "type": "function",
+        "snippet": "@hf_value.${1: s1}.uri",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "text": "@hf_value.${1: s1}.uri",
+        "rightLabel": "textops",
+        "description": "\n\nExported by: textops\n\n"
+    },
+    {
+        "type": "function",
+        "snippet": "@hf_value.${1: s1}.uri",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "text": "@hf_value.${1: s1}.uri",
+        "rightLabel": "textops",
+        "description": "\n\nExported by: textops\n\n"
+    },
+    {
+        "type": "function",
+        "snippet": "@hf_value.${1: s1}[${2: i2}]",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "text": "@hf_value.${1: s1}[${2: i2}]",
+        "rightLabel": "textops",
+        "description": "\n\nExported by: textops\n\n"
+    },
+    {
+        "type": "function",
+        "snippet": "@hf_value.${1: s1}[${2: i2}].${1: s1}",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "text": "@hf_value.${1: s1}[${2: i2}].${1: s1}",
+        "rightLabel": "textops",
+        "description": "\n\nExported by: textops\n\n"
+    },
+    {
+        "type": "function",
+        "snippet": "@hf_value.${1: s1}[${2: i2}].name",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "text": "@hf_value.${1: s1}[${2: i2}].name",
+        "rightLabel": "textops",
+        "description": "\n\nExported by: textops\n\n"
+    },
+    {
+        "type": "function",
+        "snippet": "@hf_value.${1: s1}[${2: i2}].nameaddr",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "text": "@hf_value.${1: s1}[${2: i2}].nameaddr",
+        "rightLabel": "textops",
+        "description": "\n\nExported by: textops\n\n"
+    },
+    {
+        "type": "function",
+        "snippet": "@hf_value.${1: s1}[${2: i2}].p[${1: s1}]",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "text": "@hf_value.${1: s1}[${2: i2}].p[${1: s1}]",
+        "rightLabel": "textops",
+        "description": "\n\nExported by: textops\n\n"
+    },
+    {
+        "type": "function",
+        "snippet": "@hf_value.${1: s1}[${2: i2}].param[${1: s1}]",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "text": "@hf_value.${1: s1}[${2: i2}].param[${1: s1}]",
+        "rightLabel": "textops",
+        "description": "\n\nExported by: textops\n\n"
+    },
+    {
+        "type": "function",
+        "snippet": "@hf_value.${1: s1}[${2: i2}].uri",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "text": "@hf_value.${1: s1}[${2: i2}].uri",
+        "rightLabel": "textops",
+        "description": "\n\nExported by: textops\n\n"
+    },
+    {
+        "type": "function",
+        "snippet": "@hf_value.${1: s1}[${2: i2}].uri",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "text": "@hf_value.${1: s1}[${2: i2}].uri",
+        "rightLabel": "textops",
+        "description": "\n\nExported by: textops\n\n"
+    },
+    {
+        "type": "function",
+        "snippet": "@hf_value2.${1: s1}",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "text": "@hf_value2.${1: s1}",
+        "rightLabel": "textops",
+        "description": "\n\nExported by: textops\n\n"
+    },
+    {
+        "type": "function",
+        "snippet": "@hf_value2.${1: s1}.${1: s1}",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "text": "@hf_value2.${1: s1}.${1: s1}",
+        "rightLabel": "textops",
+        "description": "\n\nExported by: textops\n\n"
+    },
+    {
+        "type": "function",
+        "snippet": "@hf_value2.${1: s1}.${1: s1}",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "text": "@hf_value2.${1: s1}.${1: s1}",
+        "rightLabel": "textops",
+        "description": "\n\nExported by: textops\n\n"
+    },
+    {
+        "type": "function",
+        "snippet": "@hf_value2.${1: s1}.${1: s1}",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "text": "@hf_value2.${1: s1}.${1: s1}",
+        "rightLabel": "textops",
+        "description": "\n\nExported by: textops\n\n"
+    },
+    {
+        "type": "function",
+        "snippet": "@hf_value2.${1: s1}[${2: i2}]",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "text": "@hf_value2.${1: s1}[${2: i2}]",
+        "rightLabel": "textops",
+        "description": "\n\nExported by: textops\n\n"
+    },
+    {
+        "type": "function",
+        "snippet": "@hf_value2.${1: s1}[${2: i2}].${1: s1}",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "text": "@hf_value2.${1: s1}[${2: i2}].${1: s1}",
+        "rightLabel": "textops",
+        "description": "\n\nExported by: textops\n\n"
+    },
+    {
+        "type": "function",
+        "snippet": "@hf_value2.${1: s1}[${2: i2}].${1: s1}",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "text": "@hf_value2.${1: s1}[${2: i2}].${1: s1}",
+        "rightLabel": "textops",
+        "description": "\n\nExported by: textops\n\n"
+    },
+    {
+        "type": "function",
+        "snippet": "@hf_value2.${1: s1}[${2: i2}].${1: s1}",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "text": "@hf_value2.${1: s1}[${2: i2}].${1: s1}",
+        "rightLabel": "textops",
+        "description": "\n\nExported by: textops\n\n"
+    },
+    {
+        "type": "function",
+        "snippet": "@hf_value_exists[${1: s1}].${1: s1}",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "text": "@hf_value_exists[${1: s1}].${1: s1}",
+        "rightLabel": "textops",
+        "description": "\n\nExported by: textops\n\n"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "core",
+        "type": "function",
+        "description": "\n\nExported by: core\n\n",
+        "text": "@m"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "core",
+        "type": "function",
+        "description": "\n\nExported by: core\n\n",
+        "text": "@m.expires"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "core",
+        "type": "function",
+        "description": "\n\nExported by: core\n\n",
+        "text": "@m.instance"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "core",
+        "type": "function",
+        "description": "\n\nExported by: core\n\n",
+        "text": "@m.method"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "core",
+        "type": "function",
+        "description": "\n\nExported by: core\n\n",
+        "text": "@m.name"
+    },
+    {
+        "type": "function",
+        "snippet": "@m.params[${1: s1}]",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "text": "@m.params[${1: s1}]",
+        "rightLabel": "core",
+        "description": "\n\nExported by: core\n\n"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "core",
+        "type": "function",
+        "description": "\n\nExported by: core\n\n",
+        "text": "@m.q"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "core",
+        "type": "function",
+        "description": "\n\nExported by: core\n\n",
+        "text": "@m.received"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "core",
+        "type": "function",
+        "description": "\n\nExported by: core\n\n",
+        "text": "@m.uri"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "core",
+        "type": "function",
+        "description": "\n\nExported by: core\n\n",
+        "text": "@m.uri.host"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "core",
+        "type": "function",
+        "description": "\n\nExported by: core\n\n",
+        "text": "@m.uri.hostport"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "core",
+        "type": "function",
+        "description": "\n\nExported by: core\n\n",
+        "text": "@m.uri.params"
+    },
+    {
+        "type": "function",
+        "snippet": "@m.uri.params[${1: s1}]",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "text": "@m.uri.params[${1: s1}]",
+        "rightLabel": "core",
+        "description": "\n\nExported by: core\n\n"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "core",
+        "type": "function",
+        "description": "\n\nExported by: core\n\n",
+        "text": "@m.uri.port"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "core",
+        "type": "function",
+        "description": "\n\nExported by: core\n\n",
+        "text": "@m.uri.pwd"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "core",
+        "type": "function",
+        "description": "\n\nExported by: core\n\n",
+        "text": "@m.uri.type"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "core",
+        "type": "function",
+        "description": "\n\nExported by: core\n\n",
+        "text": "@m.uri.user"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "core",
+        "type": "function",
+        "description": "\n\nExported by: core\n\n",
+        "text": "@method"
+    },
+    {
+        "type": "function",
+        "snippet": "@msg.${1: s1}",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "text": "@msg.${1: s1}",
+        "rightLabel": "core",
+        "description": "\n\nExported by: core\n\n"
+    },
+    {
+        "type": "function",
+        "snippet": "@msg.${1: s1}.nameaddr",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "text": "@msg.${1: s1}.nameaddr",
+        "rightLabel": "core",
+        "description": "\n\nExported by: core\n\n"
+    },
+    {
+        "type": "function",
+        "snippet": "@msg.${1: s1}.nameaddr.name",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "text": "@msg.${1: s1}.nameaddr.name",
+        "rightLabel": "core",
+        "description": "\n\nExported by: core\n\n"
+    },
+    {
+        "type": "function",
+        "snippet": "@msg.${1: s1}.nameaddr.params",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "text": "@msg.${1: s1}.nameaddr.params",
+        "rightLabel": "core",
+        "description": "\n\nExported by: core\n\n"
+    },
+    {
+        "type": "function",
+        "snippet": "@msg.${1: s1}.nameaddr.params[${1: s1}]",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "text": "@msg.${1: s1}.nameaddr.params[${1: s1}]",
+        "rightLabel": "core",
+        "description": "\n\nExported by: core\n\n"
+    },
+    {
+        "type": "function",
+        "snippet": "@msg.${1: s1}.nameaddr.uri",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "text": "@msg.${1: s1}.nameaddr.uri",
+        "rightLabel": "core",
+        "description": "\n\nExported by: core\n\n"
+    },
+    {
+        "type": "function",
+        "snippet": "@msg.${1: s1}.nameaddr.uri.host",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "text": "@msg.${1: s1}.nameaddr.uri.host",
+        "rightLabel": "core",
+        "description": "\n\nExported by: core\n\n"
+    },
+    {
+        "type": "function",
+        "snippet": "@msg.${1: s1}.nameaddr.uri.hostport",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "text": "@msg.${1: s1}.nameaddr.uri.hostport",
+        "rightLabel": "core",
+        "description": "\n\nExported by: core\n\n"
+    },
+    {
+        "type": "function",
+        "snippet": "@msg.${1: s1}.nameaddr.uri.params",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "text": "@msg.${1: s1}.nameaddr.uri.params",
+        "rightLabel": "core",
+        "description": "\n\nExported by: core\n\n"
+    },
+    {
+        "type": "function",
+        "snippet": "@msg.${1: s1}.nameaddr.uri.params[${1: s1}]",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "text": "@msg.${1: s1}.nameaddr.uri.params[${1: s1}]",
+        "rightLabel": "core",
+        "description": "\n\nExported by: core\n\n"
+    },
+    {
+        "type": "function",
+        "snippet": "@msg.${1: s1}.nameaddr.uri.port",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "text": "@msg.${1: s1}.nameaddr.uri.port",
+        "rightLabel": "core",
+        "description": "\n\nExported by: core\n\n"
+    },
+    {
+        "type": "function",
+        "snippet": "@msg.${1: s1}.nameaddr.uri.pwd",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "text": "@msg.${1: s1}.nameaddr.uri.pwd",
+        "rightLabel": "core",
+        "description": "\n\nExported by: core\n\n"
+    },
+    {
+        "type": "function",
+        "snippet": "@msg.${1: s1}.nameaddr.uri.type",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "text": "@msg.${1: s1}.nameaddr.uri.type",
+        "rightLabel": "core",
+        "description": "\n\nExported by: core\n\n"
+    },
+    {
+        "type": "function",
+        "snippet": "@msg.${1: s1}.nameaddr.uri.user",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "text": "@msg.${1: s1}.nameaddr.uri.user",
+        "rightLabel": "core",
+        "description": "\n\nExported by: core\n\n"
+    },
+    {
+        "type": "function",
+        "snippet": "@msg.${1: s1}.params[${1: s1}]",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "text": "@msg.${1: s1}.params[${1: s1}]",
+        "rightLabel": "core",
+        "description": "\n\nExported by: core\n\n"
+    },
+    {
+        "type": "function",
+        "snippet": "@msg.${1: s1}[${2: i2}]",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "text": "@msg.${1: s1}[${2: i2}]",
+        "rightLabel": "core",
+        "description": "\n\nExported by: core\n\n"
+    },
+    {
+        "type": "function",
+        "snippet": "@msg.${1: s1}[${2: i2}].nameaddr",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "text": "@msg.${1: s1}[${2: i2}].nameaddr",
+        "rightLabel": "core",
+        "description": "\n\nExported by: core\n\n"
+    },
+    {
+        "type": "function",
+        "snippet": "@msg.${1: s1}[${2: i2}].nameaddr.name",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "text": "@msg.${1: s1}[${2: i2}].nameaddr.name",
+        "rightLabel": "core",
+        "description": "\n\nExported by: core\n\n"
+    },
+    {
+        "type": "function",
+        "snippet": "@msg.${1: s1}[${2: i2}].nameaddr.params",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "text": "@msg.${1: s1}[${2: i2}].nameaddr.params",
+        "rightLabel": "core",
+        "description": "\n\nExported by: core\n\n"
+    },
+    {
+        "type": "function",
+        "snippet": "@msg.${1: s1}[${2: i2}].nameaddr.params[${1: s1}]",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "text": "@msg.${1: s1}[${2: i2}].nameaddr.params[${1: s1}]",
+        "rightLabel": "core",
+        "description": "\n\nExported by: core\n\n"
+    },
+    {
+        "type": "function",
+        "snippet": "@msg.${1: s1}[${2: i2}].nameaddr.uri",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "text": "@msg.${1: s1}[${2: i2}].nameaddr.uri",
+        "rightLabel": "core",
+        "description": "\n\nExported by: core\n\n"
+    },
+    {
+        "type": "function",
+        "snippet": "@msg.${1: s1}[${2: i2}].nameaddr.uri.host",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "text": "@msg.${1: s1}[${2: i2}].nameaddr.uri.host",
+        "rightLabel": "core",
+        "description": "\n\nExported by: core\n\n"
+    },
+    {
+        "type": "function",
+        "snippet": "@msg.${1: s1}[${2: i2}].nameaddr.uri.hostport",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "text": "@msg.${1: s1}[${2: i2}].nameaddr.uri.hostport",
+        "rightLabel": "core",
+        "description": "\n\nExported by: core\n\n"
+    },
+    {
+        "type": "function",
+        "snippet": "@msg.${1: s1}[${2: i2}].nameaddr.uri.params",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "text": "@msg.${1: s1}[${2: i2}].nameaddr.uri.params",
+        "rightLabel": "core",
+        "description": "\n\nExported by: core\n\n"
+    },
+    {
+        "type": "function",
+        "snippet": "@msg.${1: s1}[${2: i2}].nameaddr.uri.params[${1: s1}]",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "text": "@msg.${1: s1}[${2: i2}].nameaddr.uri.params[${1: s1}]",
+        "rightLabel": "core",
+        "description": "\n\nExported by: core\n\n"
+    },
+    {
+        "type": "function",
+        "snippet": "@msg.${1: s1}[${2: i2}].nameaddr.uri.port",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "text": "@msg.${1: s1}[${2: i2}].nameaddr.uri.port",
+        "rightLabel": "core",
+        "description": "\n\nExported by: core\n\n"
+    },
+    {
+        "type": "function",
+        "snippet": "@msg.${1: s1}[${2: i2}].nameaddr.uri.pwd",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "text": "@msg.${1: s1}[${2: i2}].nameaddr.uri.pwd",
+        "rightLabel": "core",
+        "description": "\n\nExported by: core\n\n"
+    },
+    {
+        "type": "function",
+        "snippet": "@msg.${1: s1}[${2: i2}].nameaddr.uri.type",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "text": "@msg.${1: s1}[${2: i2}].nameaddr.uri.type",
+        "rightLabel": "core",
+        "description": "\n\nExported by: core\n\n"
+    },
+    {
+        "type": "function",
+        "snippet": "@msg.${1: s1}[${2: i2}].nameaddr.uri.user",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "text": "@msg.${1: s1}[${2: i2}].nameaddr.uri.user",
+        "rightLabel": "core",
+        "description": "\n\nExported by: core\n\n"
+    },
+    {
+        "type": "function",
+        "snippet": "@msg.${1: s1}[${2: i2}].params[${1: s1}]",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "text": "@msg.${1: s1}[${2: i2}].params[${1: s1}]",
+        "rightLabel": "core",
+        "description": "\n\nExported by: core\n\n"
+    },
+    {
+        "type": "function",
+        "snippet": "@nathelper.rewrite_contact[${1: i1}]",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "text": "@nathelper.rewrite_contact[${1: i1}]",
+        "rightLabel": "nathelper",
+        "description": "\n\nExported by: nathelper\n\n"
+    },
+    {
+        "type": "function",
+        "snippet": "@nathelper.rewrite_contact[${1: i1}].nameaddr",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "text": "@nathelper.rewrite_contact[${1: i1}].nameaddr",
+        "rightLabel": "nathelper",
+        "description": "\n\nExported by: nathelper\n\n"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "core",
+        "type": "function",
+        "description": "\n\nExported by: core\n\n",
+        "text": "@next_hop"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "core",
+        "type": "function",
+        "description": "\n\nExported by: core\n\n",
+        "text": "@next_hop.host"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "core",
+        "type": "function",
+        "description": "\n\nExported by: core\n\n",
+        "text": "@next_hop.hostport"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "core",
+        "type": "function",
+        "description": "\n\nExported by: core\n\n",
+        "text": "@next_hop.params"
+    },
+    {
+        "type": "function",
+        "snippet": "@next_hop.params[${1: s1}]",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "text": "@next_hop.params[${1: s1}]",
+        "rightLabel": "core",
+        "description": "\n\nExported by: core\n\n"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "core",
+        "type": "function",
+        "description": "\n\nExported by: core\n\n",
+        "text": "@next_hop.port"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "core",
+        "type": "function",
+        "description": "\n\nExported by: core\n\n",
+        "text": "@next_hop.pwd"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "core",
+        "type": "function",
+        "description": "\n\nExported by: core\n\n",
+        "text": "@next_hop.type"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "core",
+        "type": "function",
+        "description": "\n\nExported by: core\n\n",
+        "text": "@next_hop.user"
+    },
+    {
+        "type": "function",
+        "snippet": "@proxy_authorization[${1: s1}]",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "text": "@proxy_authorization[${1: s1}]",
+        "rightLabel": "core",
+        "description": "\n\nExported by: core\n\n"
+    },
+    {
+        "type": "function",
+        "snippet": "@proxy_authorization[${1: s1}].algorithm",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "text": "@proxy_authorization[${1: s1}].algorithm",
+        "rightLabel": "core",
+        "description": "\n\nExported by: core\n\n"
+    },
+    {
+        "type": "function",
+        "snippet": "@proxy_authorization[${1: s1}].cnonce",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "text": "@proxy_authorization[${1: s1}].cnonce",
+        "rightLabel": "core",
+        "description": "\n\nExported by: core\n\n"
+    },
+    {
+        "type": "function",
+        "snippet": "@proxy_authorization[${1: s1}].nc",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "text": "@proxy_authorization[${1: s1}].nc",
+        "rightLabel": "core",
+        "description": "\n\nExported by: core\n\n"
+    },
+    {
+        "type": "function",
+        "snippet": "@proxy_authorization[${1: s1}].nonce",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "text": "@proxy_authorization[${1: s1}].nonce",
+        "rightLabel": "core",
+        "description": "\n\nExported by: core\n\n"
+    },
+    {
+        "type": "function",
+        "snippet": "@proxy_authorization[${1: s1}].opaque",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "text": "@proxy_authorization[${1: s1}].opaque",
+        "rightLabel": "core",
+        "description": "\n\nExported by: core\n\n"
+    },
+    {
+        "type": "function",
+        "snippet": "@proxy_authorization[${1: s1}].qop",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "text": "@proxy_authorization[${1: s1}].qop",
+        "rightLabel": "core",
+        "description": "\n\nExported by: core\n\n"
+    },
+    {
+        "type": "function",
+        "snippet": "@proxy_authorization[${1: s1}].realm",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "text": "@proxy_authorization[${1: s1}].realm",
+        "rightLabel": "core",
+        "description": "\n\nExported by: core\n\n"
+    },
+    {
+        "type": "function",
+        "snippet": "@proxy_authorization[${1: s1}].response",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "text": "@proxy_authorization[${1: s1}].response",
+        "rightLabel": "core",
+        "description": "\n\nExported by: core\n\n"
+    },
+    {
+        "type": "function",
+        "snippet": "@proxy_authorization[${1: s1}].uri",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "text": "@proxy_authorization[${1: s1}].uri",
+        "rightLabel": "core",
+        "description": "\n\nExported by: core\n\n"
+    },
+    {
+        "type": "function",
+        "snippet": "@proxy_authorization[${1: s1}].username",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "text": "@proxy_authorization[${1: s1}].username",
+        "rightLabel": "core",
+        "description": "\n\nExported by: core\n\n"
+    },
+    {
+        "type": "function",
+        "snippet": "@proxy_authorization[${1: s1}].username.domain",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "text": "@proxy_authorization[${1: s1}].username.domain",
+        "rightLabel": "core",
+        "description": "\n\nExported by: core\n\n"
+    },
+    {
+        "type": "function",
+        "snippet": "@proxy_authorization[${1: s1}].username.user",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "text": "@proxy_authorization[${1: s1}].username.user",
+        "rightLabel": "core",
+        "description": "\n\nExported by: core\n\n"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "core",
+        "type": "function",
+        "description": "\n\nExported by: core\n\n",
+        "text": "@received.ip"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "core",
+        "type": "function",
+        "description": "\n\nExported by: core\n\n",
+        "text": "@received.ip_port"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "core",
+        "type": "function",
+        "description": "\n\nExported by: core\n\n",
+        "text": "@received.port"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "core",
+        "type": "function",
+        "description": "\n\nExported by: core\n\n",
+        "text": "@received.proto"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "core",
+        "type": "function",
+        "description": "\n\nExported by: core\n\n",
+        "text": "@received.proto_ip_port"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "core",
+        "type": "function",
+        "description": "\n\nExported by: core\n\n",
+        "text": "@record_route"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "core",
+        "type": "function",
+        "description": "\n\nExported by: core\n\n",
+        "text": "@record_route.name"
+    },
+    {
+        "type": "function",
+        "snippet": "@record_route.params[${1: s1}]",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "text": "@record_route.params[${1: s1}]",
+        "rightLabel": "core",
+        "description": "\n\nExported by: core\n\n"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "core",
+        "type": "function",
+        "description": "\n\nExported by: core\n\n",
+        "text": "@record_route.uri"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "core",
+        "type": "function",
+        "description": "\n\nExported by: core\n\n",
+        "text": "@record_route.uri.host"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "core",
+        "type": "function",
+        "description": "\n\nExported by: core\n\n",
+        "text": "@record_route.uri.hostport"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "core",
+        "type": "function",
+        "description": "\n\nExported by: core\n\n",
+        "text": "@record_route.uri.params"
+    },
+    {
+        "type": "function",
+        "snippet": "@record_route.uri.params[${1: s1}]",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "text": "@record_route.uri.params[${1: s1}]",
+        "rightLabel": "core",
+        "description": "\n\nExported by: core\n\n"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "core",
+        "type": "function",
+        "description": "\n\nExported by: core\n\n",
+        "text": "@record_route.uri.port"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "core",
+        "type": "function",
+        "description": "\n\nExported by: core\n\n",
+        "text": "@record_route.uri.pwd"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "core",
+        "type": "function",
+        "description": "\n\nExported by: core\n\n",
+        "text": "@record_route.uri.type"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "core",
+        "type": "function",
+        "description": "\n\nExported by: core\n\n",
+        "text": "@record_route.uri.user"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "core",
+        "type": "function",
+        "description": "\n\nExported by: core\n\n",
+        "text": "@rr"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "rr",
+        "type": "function",
+        "description": "\n\nExported by: rr\n\n",
+        "text": "@rr.dialog_cookie"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "core",
+        "type": "function",
+        "description": "\n\nExported by: core\n\n",
+        "text": "@rr.name"
+    },
+    {
+        "type": "function",
+        "snippet": "@rr.params[${1: s1}]",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "text": "@rr.params[${1: s1}]",
+        "rightLabel": "core",
+        "description": "\n\nExported by: core\n\n"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "core",
+        "type": "function",
+        "description": "\n\nExported by: core\n\n",
+        "text": "@rr.uri"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "core",
+        "type": "function",
+        "description": "\n\nExported by: core\n\n",
+        "text": "@rr.uri.host"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "core",
+        "type": "function",
+        "description": "\n\nExported by: core\n\n",
+        "text": "@rr.uri.hostport"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "core",
+        "type": "function",
+        "description": "\n\nExported by: core\n\n",
+        "text": "@rr.uri.params"
+    },
+    {
+        "type": "function",
+        "snippet": "@rr.uri.params[${1: s1}]",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "text": "@rr.uri.params[${1: s1}]",
+        "rightLabel": "core",
+        "description": "\n\nExported by: core\n\n"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "core",
+        "type": "function",
+        "description": "\n\nExported by: core\n\n",
+        "text": "@rr.uri.port"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "core",
+        "type": "function",
+        "description": "\n\nExported by: core\n\n",
+        "text": "@rr.uri.pwd"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "core",
+        "type": "function",
+        "description": "\n\nExported by: core\n\n",
+        "text": "@rr.uri.type"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "core",
+        "type": "function",
+        "description": "\n\nExported by: core\n\n",
+        "text": "@rr.uri.user"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "core",
+        "type": "function",
+        "description": "\n\nExported by: core\n\n",
+        "text": "@ruri"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "core",
+        "type": "function",
+        "description": "\n\nExported by: core\n\n",
+        "text": "@ruri.host"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "core",
+        "type": "function",
+        "description": "\n\nExported by: core\n\n",
+        "text": "@ruri.hostport"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "core",
+        "type": "function",
+        "description": "\n\nExported by: core\n\n",
+        "text": "@ruri.params"
+    },
+    {
+        "type": "function",
+        "snippet": "@ruri.params[${1: s1}]",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "text": "@ruri.params[${1: s1}]",
+        "rightLabel": "core",
+        "description": "\n\nExported by: core\n\n"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "core",
+        "type": "function",
+        "description": "\n\nExported by: core\n\n",
+        "text": "@ruri.port"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "core",
+        "type": "function",
+        "description": "\n\nExported by: core\n\n",
+        "text": "@ruri.pwd"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "core",
+        "type": "function",
+        "description": "\n\nExported by: core\n\n",
+        "text": "@ruri.type"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "core",
+        "type": "function",
+        "description": "\n\nExported by: core\n\n",
+        "text": "@ruri.user"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "core",
+        "type": "function",
+        "description": "\n\nExported by: core\n\n",
+        "text": "@src.ip"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "core",
+        "type": "function",
+        "description": "\n\nExported by: core\n\n",
+        "text": "@src.ip_port"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "core",
+        "type": "function",
+        "description": "\n\nExported by: core\n\n",
+        "text": "@src.port"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "core",
+        "type": "function",
+        "description": "\n\nExported by: core\n\n",
+        "text": "@t"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "core",
+        "type": "function",
+        "description": "\n\nExported by: core\n\n",
+        "text": "@t.name"
+    },
+    {
+        "type": "function",
+        "snippet": "@t.params[${1: s1}]",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "text": "@t.params[${1: s1}]",
+        "rightLabel": "core",
+        "description": "\n\nExported by: core\n\n"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "core",
+        "type": "function",
+        "description": "\n\nExported by: core\n\n",
+        "text": "@t.tag"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "core",
+        "type": "function",
+        "description": "\n\nExported by: core\n\n",
+        "text": "@t.uri"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "core",
+        "type": "function",
+        "description": "\n\nExported by: core\n\n",
+        "text": "@t.uri.host"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "core",
+        "type": "function",
+        "description": "\n\nExported by: core\n\n",
+        "text": "@t.uri.hostport"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "core",
+        "type": "function",
+        "description": "\n\nExported by: core\n\n",
+        "text": "@t.uri.params"
+    },
+    {
+        "type": "function",
+        "snippet": "@t.uri.params[${1: s1}]",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "text": "@t.uri.params[${1: s1}]",
+        "rightLabel": "core",
+        "description": "\n\nExported by: core\n\n"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "core",
+        "type": "function",
+        "description": "\n\nExported by: core\n\n",
+        "text": "@t.uri.port"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "core",
+        "type": "function",
+        "description": "\n\nExported by: core\n\n",
+        "text": "@t.uri.pwd"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "core",
+        "type": "function",
+        "description": "\n\nExported by: core\n\n",
+        "text": "@t.uri.type"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "core",
+        "type": "function",
+        "description": "\n\nExported by: core\n\n",
+        "text": "@t.uri.user"
+    },
+    {
+        "type": "function",
+        "snippet": "@timer[${1: i1}].enabled",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "text": "@timer[${1: i1}].enabled",
+        "rightLabel": "timer",
+        "description": "\n\nExported by: timer\n\n"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.cipher"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.cipher.bits"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.desc"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.description"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.me"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.me.IPAddress"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.me.dns"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.me.email"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.me.emailAddress"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.me.email_address"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.me.expired"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.me.host"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.me.hostname"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.me.ip"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.me.ip_address"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.me.issuer"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.me.issuer.c"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.me.issuer.cn"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.me.issuer.commonName"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.me.issuer.common_name"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.me.issuer.country"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.me.issuer.countryName"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.me.issuer.country_name"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.me.issuer.l"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.me.issuer.locality"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.me.issuer.localityName"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.me.issuer.locality_name"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.me.issuer.name"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.me.issuer.o"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.me.issuer.organization"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.me.issuer.organizationName"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.me.issuer.organization_name"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.me.issuer.organizationalUnitName"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.me.issuer.organizational_unit_name"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.me.issuer.ou"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.me.issuer.st"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.me.issuer.state"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.me.issuer.stateOrProvinceName"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.me.issuer.state_or_province_name"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.me.issuer.unit"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.me.notAfter"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.me.notBefore"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.me.not_after"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.me.not_before"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.me.revoked"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.me.self_signed"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.me.serialNumber"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.me.serial_number"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.me.sn"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.me.subj"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.me.subj.c"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.me.subj.cn"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.me.subj.commonName"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.me.subj.common_name"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.me.subj.country"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.me.subj.countryName"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.me.subj.country_name"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.me.subj.l"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.me.subj.locality"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.me.subj.localityName"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.me.subj.locality_name"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.me.subj.name"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.me.subj.o"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.me.subj.organization"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.me.subj.organizationName"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.me.subj.organization_name"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.me.subj.organizationalUnitName"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.me.subj.organizational_unit_name"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.me.subj.ou"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.me.subj.st"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.me.subj.state"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.me.subj.stateOrProvinceName"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.me.subj.state_or_province_name"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.me.subj.unit"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.me.subject"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.me.subject.c"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.me.subject.cn"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.me.subject.commonName"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.me.subject.common_name"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.me.subject.country"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.me.subject.countryName"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.me.subject.country_name"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.me.subject.l"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.me.subject.locality"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.me.subject.localityName"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.me.subject.locality_name"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.me.subject.name"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.me.subject.o"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.me.subject.organization"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.me.subject.organizationName"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.me.subject.organization_name"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.me.subject.organizationalUnitName"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.me.subject.organizational_unit_name"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.me.subject.ou"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.me.subject.st"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.me.subject.state"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.me.subject.stateOrProvinceName"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.me.subject.state_or_province_name"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.me.subject.unit"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.me.uri"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.me.url"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.me.urn"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.me.verified"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.me.version"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.my"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.my.IPAddress"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.my.dns"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.my.email"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.my.emailAddress"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.my.email_address"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.my.expired"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.my.host"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.my.hostname"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.my.ip"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.my.ip_address"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.my.issuer"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.my.issuer.c"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.my.issuer.cn"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.my.issuer.commonName"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.my.issuer.common_name"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.my.issuer.country"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.my.issuer.countryName"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.my.issuer.country_name"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.my.issuer.l"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.my.issuer.locality"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.my.issuer.localityName"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.my.issuer.locality_name"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.my.issuer.name"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.my.issuer.o"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.my.issuer.organization"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.my.issuer.organizationName"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.my.issuer.organization_name"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.my.issuer.organizationalUnitName"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.my.issuer.organizational_unit_name"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.my.issuer.ou"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.my.issuer.st"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.my.issuer.state"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.my.issuer.stateOrProvinceName"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.my.issuer.state_or_province_name"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.my.issuer.unit"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.my.notAfter"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.my.notBefore"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.my.not_after"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.my.not_before"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.my.revoked"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.my.self_signed"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.my.serialNumber"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.my.serial_number"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.my.sn"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.my.subj"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.my.subj.c"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.my.subj.cn"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.my.subj.commonName"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.my.subj.common_name"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.my.subj.country"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.my.subj.countryName"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.my.subj.country_name"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.my.subj.l"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.my.subj.locality"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.my.subj.localityName"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.my.subj.locality_name"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.my.subj.name"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.my.subj.o"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.my.subj.organization"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.my.subj.organizationName"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.my.subj.organization_name"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.my.subj.organizationalUnitName"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.my.subj.organizational_unit_name"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.my.subj.ou"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.my.subj.st"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.my.subj.state"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.my.subj.stateOrProvinceName"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.my.subj.state_or_province_name"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.my.subj.unit"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.my.subject"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.my.subject.c"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.my.subject.cn"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.my.subject.commonName"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.my.subject.common_name"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.my.subject.country"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.my.subject.countryName"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.my.subject.country_name"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.my.subject.l"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.my.subject.locality"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.my.subject.localityName"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.my.subject.locality_name"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.my.subject.name"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.my.subject.o"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.my.subject.organization"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.my.subject.organizationName"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.my.subject.organization_name"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.my.subject.organizationalUnitName"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.my.subject.organizational_unit_name"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.my.subject.ou"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.my.subject.st"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.my.subject.state"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.my.subject.stateOrProvinceName"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.my.subject.state_or_province_name"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.my.subject.unit"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.my.uri"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.my.url"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.my.urn"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.my.verified"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.my.version"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.myself"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.myself.IPAddress"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.myself.dns"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.myself.email"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.myself.emailAddress"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.myself.email_address"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.myself.expired"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.myself.host"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.myself.hostname"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.myself.ip"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.myself.ip_address"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.myself.issuer"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.myself.issuer.c"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.myself.issuer.cn"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.myself.issuer.commonName"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.myself.issuer.common_name"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.myself.issuer.country"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.myself.issuer.countryName"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.myself.issuer.country_name"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.myself.issuer.l"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.myself.issuer.locality"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.myself.issuer.localityName"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.myself.issuer.locality_name"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.myself.issuer.name"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.myself.issuer.o"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.myself.issuer.organization"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.myself.issuer.organizationName"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.myself.issuer.organization_name"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.myself.issuer.organizationalUnitName"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.myself.issuer.organizational_unit_name"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.myself.issuer.ou"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.myself.issuer.st"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.myself.issuer.state"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.myself.issuer.stateOrProvinceName"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.myself.issuer.state_or_province_name"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.myself.issuer.unit"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.myself.notAfter"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.myself.notBefore"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.myself.not_after"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.myself.not_before"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.myself.revoked"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.myself.self_signed"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.myself.serialNumber"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.myself.serial_number"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.myself.sn"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.myself.subj"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.myself.subj.c"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.myself.subj.cn"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.myself.subj.commonName"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.myself.subj.common_name"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.myself.subj.country"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.myself.subj.countryName"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.myself.subj.country_name"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.myself.subj.l"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.myself.subj.locality"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.myself.subj.localityName"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.myself.subj.locality_name"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.myself.subj.name"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.myself.subj.o"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.myself.subj.organization"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.myself.subj.organizationName"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.myself.subj.organization_name"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.myself.subj.organizationalUnitName"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.myself.subj.organizational_unit_name"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.myself.subj.ou"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.myself.subj.st"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.myself.subj.state"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.myself.subj.stateOrProvinceName"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.myself.subj.state_or_province_name"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.myself.subj.unit"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.myself.subject"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.myself.subject.c"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.myself.subject.cn"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.myself.subject.commonName"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.myself.subject.common_name"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.myself.subject.country"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.myself.subject.countryName"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.myself.subject.country_name"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.myself.subject.l"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.myself.subject.locality"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.myself.subject.localityName"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.myself.subject.locality_name"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.myself.subject.name"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.myself.subject.o"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.myself.subject.organization"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.myself.subject.organizationName"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.myself.subject.organization_name"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.myself.subject.organizationalUnitName"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.myself.subject.organizational_unit_name"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.myself.subject.ou"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.myself.subject.st"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.myself.subject.state"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.myself.subject.stateOrProvinceName"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.myself.subject.state_or_province_name"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.myself.subject.unit"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.myself.uri"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.myself.url"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.myself.urn"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.myself.verified"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.myself.version"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.peer"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.peer.IPAddress"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.peer.dns"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.peer.email"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.peer.emailAddress"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.peer.email_address"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.peer.expired"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.peer.host"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.peer.hostname"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.peer.ip"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.peer.ip_address"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.peer.issuer"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.peer.issuer.c"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.peer.issuer.cn"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.peer.issuer.commonName"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.peer.issuer.common_name"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.peer.issuer.country"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.peer.issuer.countryName"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.peer.issuer.country_name"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.peer.issuer.l"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.peer.issuer.locality"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.peer.issuer.localityName"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.peer.issuer.locality_name"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.peer.issuer.name"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.peer.issuer.o"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.peer.issuer.organization"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.peer.issuer.organizationName"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.peer.issuer.organization_name"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.peer.issuer.organizationalUnitName"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.peer.issuer.organizational_unit_name"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.peer.issuer.ou"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.peer.issuer.st"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.peer.issuer.state"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.peer.issuer.stateOrProvinceName"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.peer.issuer.state_or_province_name"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.peer.issuer.unit"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.peer.notAfter"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.peer.notBefore"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.peer.not_after"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.peer.not_before"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.peer.revoked"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.peer.self_signed"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.peer.serialNumber"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.peer.serial_number"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.peer.sn"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.peer.subj"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.peer.subj.c"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.peer.subj.cn"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.peer.subj.commonName"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.peer.subj.common_name"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.peer.subj.country"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.peer.subj.countryName"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.peer.subj.country_name"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.peer.subj.l"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.peer.subj.locality"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.peer.subj.localityName"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.peer.subj.locality_name"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.peer.subj.name"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.peer.subj.o"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.peer.subj.organization"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.peer.subj.organizationName"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.peer.subj.organization_name"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.peer.subj.organizationalUnitName"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.peer.subj.organizational_unit_name"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.peer.subj.ou"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.peer.subj.st"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.peer.subj.state"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.peer.subj.stateOrProvinceName"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.peer.subj.state_or_province_name"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.peer.subj.unit"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.peer.subject"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.peer.subject.c"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.peer.subject.cn"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.peer.subject.commonName"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.peer.subject.common_name"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.peer.subject.country"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.peer.subject.countryName"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.peer.subject.country_name"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.peer.subject.l"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.peer.subject.locality"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.peer.subject.localityName"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.peer.subject.locality_name"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.peer.subject.name"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.peer.subject.o"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.peer.subject.organization"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.peer.subject.organizationName"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.peer.subject.organization_name"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.peer.subject.organizationalUnitName"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.peer.subject.organizational_unit_name"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.peer.subject.ou"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.peer.subject.st"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.peer.subject.state"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.peer.subject.stateOrProvinceName"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.peer.subject.state_or_province_name"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.peer.subject.unit"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.peer.uri"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.peer.url"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.peer.urn"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.peer.verified"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.peer.version"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "tls",
+        "type": "function",
+        "description": "\n\nExported by: tls\n\n",
+        "text": "@tls.version"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "core",
+        "type": "function",
+        "description": "\n\nExported by: core\n\n",
+        "text": "@to"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "core",
+        "type": "function",
+        "description": "\n\nExported by: core\n\n",
+        "text": "@to.name"
+    },
+    {
+        "type": "function",
+        "snippet": "@to.params[${1: s1}]",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "text": "@to.params[${1: s1}]",
+        "rightLabel": "core",
+        "description": "\n\nExported by: core\n\n"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "core",
+        "type": "function",
+        "description": "\n\nExported by: core\n\n",
+        "text": "@to.tag"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "core",
+        "type": "function",
+        "description": "\n\nExported by: core\n\n",
+        "text": "@to.uri"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "core",
+        "type": "function",
+        "description": "\n\nExported by: core\n\n",
+        "text": "@to.uri.host"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "core",
+        "type": "function",
+        "description": "\n\nExported by: core\n\n",
+        "text": "@to.uri.hostport"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "core",
+        "type": "function",
+        "description": "\n\nExported by: core\n\n",
+        "text": "@to.uri.params"
+    },
+    {
+        "type": "function",
+        "snippet": "@to.uri.params[${1: s1}]",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "text": "@to.uri.params[${1: s1}]",
+        "rightLabel": "core",
+        "description": "\n\nExported by: core\n\n"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "core",
+        "type": "function",
+        "description": "\n\nExported by: core\n\n",
+        "text": "@to.uri.port"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "core",
+        "type": "function",
+        "description": "\n\nExported by: core\n\n",
+        "text": "@to.uri.pwd"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "core",
+        "type": "function",
+        "description": "\n\nExported by: core\n\n",
+        "text": "@to.uri.type"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "core",
+        "type": "function",
+        "description": "\n\nExported by: core\n\n",
+        "text": "@to.uri.user"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "core",
+        "type": "function",
+        "description": "\n\nExported by: core\n\n",
+        "text": "@v"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "core",
+        "type": "function",
+        "description": "\n\nExported by: core\n\n",
+        "text": "@v.alias"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "core",
+        "type": "function",
+        "description": "\n\nExported by: core\n\n",
+        "text": "@v.branch"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "core",
+        "type": "function",
+        "description": "\n\nExported by: core\n\n",
+        "text": "@v.comment"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "core",
+        "type": "function",
+        "description": "\n\nExported by: core\n\n",
+        "text": "@v.host"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "core",
+        "type": "function",
+        "description": "\n\nExported by: core\n\n",
+        "text": "@v.i"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "core",
+        "type": "function",
+        "description": "\n\nExported by: core\n\n",
+        "text": "@v.name"
+    },
+    {
+        "type": "function",
+        "snippet": "@v.params[${1: s1}]",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "text": "@v.params[${1: s1}]",
+        "rightLabel": "core",
+        "description": "\n\nExported by: core\n\n"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "core",
+        "type": "function",
+        "description": "\n\nExported by: core\n\n",
+        "text": "@v.port"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "core",
+        "type": "function",
+        "description": "\n\nExported by: core\n\n",
+        "text": "@v.received"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "core",
+        "type": "function",
+        "description": "\n\nExported by: core\n\n",
+        "text": "@v.rport"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "core",
+        "type": "function",
+        "description": "\n\nExported by: core\n\n",
+        "text": "@v.transport"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "core",
+        "type": "function",
+        "description": "\n\nExported by: core\n\n",
+        "text": "@v.version"
+    },
+    {
+        "type": "function",
+        "snippet": "@v[${1: i1}]",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "text": "@v[${1: i1}]",
+        "rightLabel": "core",
+        "description": "\n\nExported by: core\n\n"
+    },
+    {
+        "type": "function",
+        "snippet": "@v[${1: i1}].alias",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "text": "@v[${1: i1}].alias",
+        "rightLabel": "core",
+        "description": "\n\nExported by: core\n\n"
+    },
+    {
+        "type": "function",
+        "snippet": "@v[${1: i1}].branch",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "text": "@v[${1: i1}].branch",
+        "rightLabel": "core",
+        "description": "\n\nExported by: core\n\n"
+    },
+    {
+        "type": "function",
+        "snippet": "@v[${1: i1}].comment",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "text": "@v[${1: i1}].comment",
+        "rightLabel": "core",
+        "description": "\n\nExported by: core\n\n"
+    },
+    {
+        "type": "function",
+        "snippet": "@v[${1: i1}].host",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "text": "@v[${1: i1}].host",
+        "rightLabel": "core",
+        "description": "\n\nExported by: core\n\n"
+    },
+    {
+        "type": "function",
+        "snippet": "@v[${1: i1}].i",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "text": "@v[${1: i1}].i",
+        "rightLabel": "core",
+        "description": "\n\nExported by: core\n\n"
+    },
+    {
+        "type": "function",
+        "snippet": "@v[${1: i1}].name",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "text": "@v[${1: i1}].name",
+        "rightLabel": "core",
+        "description": "\n\nExported by: core\n\n"
+    },
+    {
+        "type": "function",
+        "snippet": "@v[${1: i1}].params[${2: s2}]",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "text": "@v[${1: i1}].params[${2: s2}]",
+        "rightLabel": "core",
+        "description": "\n\nExported by: core\n\n"
+    },
+    {
+        "type": "function",
+        "snippet": "@v[${1: i1}].port",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "text": "@v[${1: i1}].port",
+        "rightLabel": "core",
+        "description": "\n\nExported by: core\n\n"
+    },
+    {
+        "type": "function",
+        "snippet": "@v[${1: i1}].received",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "text": "@v[${1: i1}].received",
+        "rightLabel": "core",
+        "description": "\n\nExported by: core\n\n"
+    },
+    {
+        "type": "function",
+        "snippet": "@v[${1: i1}].rport",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "text": "@v[${1: i1}].rport",
+        "rightLabel": "core",
+        "description": "\n\nExported by: core\n\n"
+    },
+    {
+        "type": "function",
+        "snippet": "@v[${1: i1}].transport",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "text": "@v[${1: i1}].transport",
+        "rightLabel": "core",
+        "description": "\n\nExported by: core\n\n"
+    },
+    {
+        "type": "function",
+        "snippet": "@v[${1: i1}].version",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "text": "@v[${1: i1}].version",
+        "rightLabel": "core",
+        "description": "\n\nExported by: core\n\n"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "core",
+        "type": "function",
+        "description": "\n\nExported by: core\n\n",
+        "text": "@via"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "core",
+        "type": "function",
+        "description": "\n\nExported by: core\n\n",
+        "text": "@via.alias"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "core",
+        "type": "function",
+        "description": "\n\nExported by: core\n\n",
+        "text": "@via.branch"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "core",
+        "type": "function",
+        "description": "\n\nExported by: core\n\n",
+        "text": "@via.comment"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "core",
+        "type": "function",
+        "description": "\n\nExported by: core\n\n",
+        "text": "@via.host"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "core",
+        "type": "function",
+        "description": "\n\nExported by: core\n\n",
+        "text": "@via.i"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "core",
+        "type": "function",
+        "description": "\n\nExported by: core\n\n",
+        "text": "@via.name"
+    },
+    {
+        "type": "function",
+        "snippet": "@via.params[${1: s1}]",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "text": "@via.params[${1: s1}]",
+        "rightLabel": "core",
+        "description": "\n\nExported by: core\n\n"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "core",
+        "type": "function",
+        "description": "\n\nExported by: core\n\n",
+        "text": "@via.port"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "core",
+        "type": "function",
+        "description": "\n\nExported by: core\n\n",
+        "text": "@via.received"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "core",
+        "type": "function",
+        "description": "\n\nExported by: core\n\n",
+        "text": "@via.rport"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "core",
+        "type": "function",
+        "description": "\n\nExported by: core\n\n",
+        "text": "@via.transport"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "core",
+        "type": "function",
+        "description": "\n\nExported by: core\n\n",
+        "text": "@via.version"
+    },
+    {
+        "type": "function",
+        "snippet": "@via[${1: i1}]",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "text": "@via[${1: i1}]",
+        "rightLabel": "core",
+        "description": "\n\nExported by: core\n\n"
+    },
+    {
+        "type": "function",
+        "snippet": "@via[${1: i1}].alias",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "text": "@via[${1: i1}].alias",
+        "rightLabel": "core",
+        "description": "\n\nExported by: core\n\n"
+    },
+    {
+        "type": "function",
+        "snippet": "@via[${1: i1}].branch",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "text": "@via[${1: i1}].branch",
+        "rightLabel": "core",
+        "description": "\n\nExported by: core\n\n"
+    },
+    {
+        "type": "function",
+        "snippet": "@via[${1: i1}].comment",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "text": "@via[${1: i1}].comment",
+        "rightLabel": "core",
+        "description": "\n\nExported by: core\n\n"
+    },
+    {
+        "type": "function",
+        "snippet": "@via[${1: i1}].host",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "text": "@via[${1: i1}].host",
+        "rightLabel": "core",
+        "description": "\n\nExported by: core\n\n"
+    },
+    {
+        "type": "function",
+        "snippet": "@via[${1: i1}].i",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "text": "@via[${1: i1}].i",
+        "rightLabel": "core",
+        "description": "\n\nExported by: core\n\n"
+    },
+    {
+        "type": "function",
+        "snippet": "@via[${1: i1}].name",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "text": "@via[${1: i1}].name",
+        "rightLabel": "core",
+        "description": "\n\nExported by: core\n\n"
+    },
+    {
+        "type": "function",
+        "snippet": "@via[${1: i1}].params[${2: s2}]",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "text": "@via[${1: i1}].params[${2: s2}]",
+        "rightLabel": "core",
+        "description": "\n\nExported by: core\n\n"
+    },
+    {
+        "type": "function",
+        "snippet": "@via[${1: i1}].port",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "text": "@via[${1: i1}].port",
+        "rightLabel": "core",
+        "description": "\n\nExported by: core\n\n"
+    },
+    {
+        "type": "function",
+        "snippet": "@via[${1: i1}].received",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "text": "@via[${1: i1}].received",
+        "rightLabel": "core",
+        "description": "\n\nExported by: core\n\n"
+    },
+    {
+        "type": "function",
+        "snippet": "@via[${1: i1}].rport",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "text": "@via[${1: i1}].rport",
+        "rightLabel": "core",
+        "description": "\n\nExported by: core\n\n"
+    },
+    {
+        "type": "function",
+        "snippet": "@via[${1: i1}].transport",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "text": "@via[${1: i1}].transport",
+        "rightLabel": "core",
+        "description": "\n\nExported by: core\n\n"
+    },
+    {
+        "type": "function",
+        "snippet": "@via[${1: i1}].version",
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "text": "@via[${1: i1}].version",
+        "rightLabel": "core",
+        "description": "\n\nExported by: core\n\n"
+    },
+    {
+        "descriptionMoreURL": "https://www.kamailio.org/wiki/cookbooks/5.1.x/selects",
+        "rightLabel": "xmlrpc",
+        "type": "function",
+        "description": "\n\nExported by: xmlrpc\n\n",
+        "text": "@xmlrpc.method"
+    }
+]
