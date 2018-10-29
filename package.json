@@ -12,7 +12,7 @@
   "author": "Matteo Venditto <matteo.venditto@gmail.com>",
   "license": "MIT",
   "engines": {
-    "atom": ">=1.15.0 <2.0.0"
+    "atom": ">=1.4.0 <2.0.0"
   },
   "providedServices": {
     "autocomplete.provider": {

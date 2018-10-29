@@ -39,6 +39,42 @@
   }
 }
 
+.routes-view > div.panel-body {
+	overflow: auto;
+  contain: size;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.route-item:hover {
+	background-color: @input-background-color;
+}
+
+.route-item-label {
+	margin-left: 6px;
+}
+
+.route-item-type {
+	.route-item-label;
+	color: cornsilk;
+}
+
+.failure_route-item-type {
+	.route-item-label;
+	color: lightsalmon;
+}
+
+.onreply_route-item-type {
+	.route-item-label;
+	color: skyblue;
+}
+
+.branch_route-item-type {
+	.route-item-label;
+	color: lightgreen;
+}
+
 
 @color: #61AEEF;
 autocomplete-suggestion-list .icon.transformation {
